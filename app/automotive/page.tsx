@@ -5,6 +5,7 @@ import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { services } from "@/lib/content";
+import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "Automotive Excellence Since 1950",
@@ -17,7 +18,7 @@ const brands = [
     number: "01",
     name: "Mercedes-Benz",
     text: "The flagship ORBIS automotive story across passenger and commercial mobility.",
-    image: "/assets/mercedes-passenger.jpg",
+    image: "/assets/mercedes-sprinter.jpg",
     href: "/automotive/mercedes-benz/",
   },
   {
@@ -63,7 +64,7 @@ export default function AutomotivePage() {
                   <p>{brand.text}</p>
                 </div>
                 <div className="automotive-brands-page__image">
-                  <Image src={brand.image} alt="" fill sizes="220px" />
+                  <Image src={assetPath(brand.image)} alt="" fill sizes="220px" />
                 </div>
                 <span aria-hidden="true">↗</span>
               </Link>
@@ -109,7 +110,7 @@ export default function AutomotivePage() {
           </div>
           <div className="automotive-application__image">
             <Image
-              src="/assets/mercedes-sprinter.jpg"
+              src={assetPath("/assets/mercedes-sprinter.jpg")}
               alt="Mercedes-Benz Sprinter commercial vehicle"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"

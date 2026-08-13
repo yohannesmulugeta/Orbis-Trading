@@ -3,6 +3,7 @@ import Image from "next/image";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "Bus Body Assembly",
@@ -54,7 +55,7 @@ export default function BusAssemblyPage() {
         <div className="container bus-product__grid">
           <div className="bus-product__image">
             <Image
-              src="/assets/orbis-bus.jpg"
+              src={assetPath("/assets/orbis-bus.jpg")}
               alt="ORBIS assembled passenger bus"
               fill
               sizes="(max-width: 900px) 100vw, 55vw"
@@ -92,7 +93,7 @@ export default function BusAssemblyPage() {
       </section>
 
       <section className="workshop-banner">
-        <Image src="/assets/bus-workshop.jpg" alt="ORBIS bus assembly workshop" fill sizes="100vw" />
+        <Image src={assetPath("/assets/bus-workshop.jpg")} alt="ORBIS bus assembly workshop" fill sizes="100vw" />
         <div className="workshop-banner__overlay" />
         <div className="container workshop-banner__content">
           <p className="eyebrow eyebrow--light">Inside ORBIS</p>

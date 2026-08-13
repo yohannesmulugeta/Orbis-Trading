@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { siteUrl } from "@/lib/paths";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://orbistrading-ethiopia.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "ORBIS Trading & Technical Centre | Ethiopia",
     template: "%s | ORBIS Ethiopia",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/assets/orbis-building.jpg",
+        url: `${siteUrl}/assets/orbis-building.jpg`,
         width: 1282,
         height: 986,
         alt: "ORBIS Trading and Technical Centre in Addis Ababa",
@@ -39,7 +40,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "ORBIS Trading and Technical Centre Share Company",
   foundingDate: "1950",
-  url: "https://orbistrading-ethiopia.com",
+  url: siteUrl,
   email: "orbis.trading@ethionet.et",
   telephone: "+251115516211",
   address: {

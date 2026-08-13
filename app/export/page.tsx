@@ -4,6 +4,7 @@ import Link from "next/link";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "Agricultural Export",
@@ -18,8 +19,8 @@ export default function ExportPage() {
         eyebrow="Agricultural Export"
         title="Ethiopian origin. Global reach."
         text="Selected Ethiopian coffee, oilseeds and pulses for international markets."
-        image="/assets/coffee-cherries.jpg"
-        imageAlt="Coffee cherries growing in Ethiopia"
+        image="/assets/ethiopian-road.jpg"
+        imageAlt="Road through Ethiopian highlands"
       />
 
       <section className="section export-intro">
@@ -51,8 +52,6 @@ export default function ExportPage() {
       <section className="section export-categories">
         <div className="container export-categories__grid">
           <Link className="export-category export-category--coffee" href="/export/coffee/">
-            <Image src="/assets/coffee-cherries.jpg" alt="Ethiopian coffee cherries" fill sizes="(max-width: 900px) 100vw, 60vw" />
-            <div className="export-category__overlay" />
             <div className="export-category__copy">
               <span>01 / Primary category</span>
               <h2>Ethiopian Coffee</h2>
@@ -61,7 +60,7 @@ export default function ExportPage() {
             </div>
           </Link>
           <Link className="export-category" href="/export/oilseeds/">
-            <Image src="/assets/pulses-oilseeds.jpg" alt="Oilseeds and pulses" fill sizes="(max-width: 900px) 100vw, 40vw" />
+            <Image src={assetPath("/assets/pulses-oilseeds.jpg")} alt="Oilseeds and pulses" fill sizes="(max-width: 900px) 100vw, 40vw" />
             <div className="export-category__overlay" />
             <div className="export-category__copy">
               <span>02</span>
@@ -70,7 +69,7 @@ export default function ExportPage() {
             </div>
           </Link>
           <Link className="export-category" href="/export/pulses/">
-            <Image src="/assets/pulses-oilseeds.jpg" alt="Ethiopian pulses" fill sizes="(max-width: 900px) 100vw, 40vw" />
+            <Image src={assetPath("/assets/pulses-oilseeds.jpg")} alt="Ethiopian pulses" fill sizes="(max-width: 900px) 100vw, 40vw" />
             <div className="export-category__overlay" />
             <div className="export-category__copy">
               <span>03</span>

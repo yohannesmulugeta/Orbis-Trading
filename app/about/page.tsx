@@ -4,6 +4,7 @@ import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { coreValues, statistics, timeline } from "@/lib/content";
+import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "About ORBIS",
@@ -47,7 +48,7 @@ export default function AboutPage() {
       <section className="about-history" id="history">
         <div className="about-history__image">
           <Image
-            src="/assets/orbis-legacy.jpg"
+            src={assetPath("/assets/orbis-legacy.jpg")}
             alt="Legacy ORBIS photograph from the existing company website"
             fill
             sizes="(max-width: 900px) 100vw, 48vw"
@@ -131,7 +132,7 @@ export default function AboutPage() {
           </div>
           <div className="facilities-section__image">
             <Image
-              src="/assets/orbis-showroom.jpg"
+              src={assetPath("/assets/orbis-showroom.jpg")}
               alt="ORBIS vehicle showroom and inspection area"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"

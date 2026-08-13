@@ -3,6 +3,7 @@ import Link from "next/link";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { assetPath } from "@/lib/paths";
 
 type BrandPageProps = {
   brand: string;
@@ -55,7 +56,7 @@ export function BrandPage({
             </Link>
           </div>
           <div className="split-feature__media split-feature__media--clean">
-            <Image src={featureImage} alt={featureAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
+            <Image src={assetPath(featureImage)} alt={featureAlt} fill sizes="(max-width: 900px) 100vw, 50vw" />
           </div>
         </div>
       </section>

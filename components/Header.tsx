@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { navItems } from "@/lib/content";
+import { assetPath } from "@/lib/paths";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -28,10 +29,10 @@ export function Header() {
       <div className="site-header__inner">
         <Link className="site-header__logo" href="/" aria-label="ORBIS home">
           <Image
-            src="/assets/orbis-logo.png"
+            src={assetPath("/assets/orbis-logo.png")}
             alt="ORBIS Trading and Technical Centre Share Company"
-            width={297}
-            height={80}
+            width={1024}
+            height={256}
             priority
           />
         </Link>

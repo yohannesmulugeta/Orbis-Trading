@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { contact } from "@/lib/content";
+import { assetPath } from "@/lib/paths";
 
 export function Footer() {
   return (
@@ -10,10 +11,10 @@ export function Footer() {
         <div className="site-footer__brand">
           <div className="site-footer__logo-wrap">
             <Image
-              src="/assets/orbis-logo.png"
+              src={assetPath("/assets/orbis-logo.png")}
               alt="ORBIS Trading and Technical Centre"
-              width={297}
-              height={80}
+              width={1024}
+              height={256}
             />
           </div>
           <p>

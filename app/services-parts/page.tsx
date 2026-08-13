@@ -4,6 +4,7 @@ import Link from "next/link";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "Automotive Service & Spare Parts",
@@ -49,7 +50,7 @@ export default function ServicesPartsPage() {
       <section className="parts-feature" id="parts">
         <div className="parts-feature__image">
           <Image
-            src="/assets/bosch-parts.jpg"
+            src={assetPath("/assets/bosch-parts.jpg")}
             alt="Automotive spare parts presented in the ORBIS company profile"
             fill
             sizes="(max-width: 900px) 100vw, 48vw"
@@ -87,7 +88,7 @@ export default function ServicesPartsPage() {
           </div>
           <div className="bosch-section__image">
             <Image
-              src="/assets/bosch-parts.jpg"
+              src={assetPath("/assets/bosch-parts.jpg")}
               alt="Bosch automotive components"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"

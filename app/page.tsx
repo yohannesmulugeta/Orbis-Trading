@@ -5,6 +5,7 @@ import { ArrowLink } from "@/components/ArrowLink";
 import { InquiryCta } from "@/components/InquiryCta";
 import { SectionHeading } from "@/components/SectionHeading";
 import { coffeeGroups, services, statistics, timeline } from "@/lib/content";
+import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "Over 75 Years of Driving Ethiopia Forward",
@@ -18,7 +19,7 @@ export default function HomePage() {
       <section className="home-hero">
         <Image
           className="home-hero__background"
-          src="/assets/orbis-building.jpg"
+          src={assetPath("/assets/orbis-building.jpg")}
           alt="ORBIS headquarters in Addis Ababa"
           fill
           priority
@@ -132,8 +133,8 @@ export default function HomePage() {
               ✦
             </span>
             <Image
-              src="/assets/mercedes-passenger.jpg"
-              alt="Mercedes-Benz passenger vehicle presented in the ORBIS company profile"
+              src={assetPath("/assets/mercedes-sprinter.jpg")}
+              alt="Mercedes-Benz Sprinter vehicle"
               fill
               sizes="(max-width: 900px) 100vw, 55vw"
             />
@@ -157,7 +158,7 @@ export default function HomePage() {
             <Link className="brand-card brand-card--wide" href="/automotive/mercedes-benz/">
               <div className="brand-card__image">
                 <Image
-                  src="/assets/mercedes-truck.jpg"
+                  src={assetPath("/assets/mercedes-truck.jpg")}
                   alt="Mercedes-Benz commercial vehicle"
                   fill
                   sizes="(max-width: 900px) 100vw, 60vw"
@@ -174,7 +175,7 @@ export default function HomePage() {
             <Link className="brand-card" href="/automotive/renault/">
               <div className="brand-card__image">
                 <Image
-                  src="/assets/renault-duster.jpg"
+                  src={assetPath("/assets/renault-duster.jpg")}
                   alt="Renault passenger vehicle"
                   fill
                   sizes="(max-width: 900px) 100vw, 40vw"
@@ -191,7 +192,7 @@ export default function HomePage() {
             <Link className="brand-card brand-card--dark" href="/automotive/mitsubishi-fuso/">
               <div className="brand-card__image">
                 <Image
-                  src="/assets/fuso-truck.jpg"
+                  src={assetPath("/assets/fuso-truck.jpg")}
                   alt="Mitsubishi Fuso commercial vehicle"
                   fill
                   sizes="(max-width: 900px) 100vw, 40vw"
@@ -248,7 +249,7 @@ export default function HomePage() {
       <section className="bus-feature">
         <div className="bus-feature__media">
           <Image
-            src="/assets/bus-workshop.jpg"
+            src={assetPath("/assets/bus-workshop.jpg")}
             alt="ORBIS bus assembly workshop"
             fill
             sizes="(max-width: 900px) 100vw, 50vw"
@@ -283,13 +284,6 @@ export default function HomePage() {
       </section>
 
       <section className="export-feature">
-        <Image
-          className="export-feature__background"
-          src="/assets/coffee-cherries.jpg"
-          alt="Ethiopian coffee cherries"
-          fill
-          sizes="100vw"
-        />
         <div className="export-feature__overlay" />
         <div className="container export-feature__content">
           <p className="eyebrow eyebrow--light">Agricultural export</p>
@@ -321,13 +315,13 @@ export default function HomePage() {
       <section className="section coffee-origins">
         <div className="container coffee-origins__grid">
           <div className="coffee-origins__visual">
-            <span className="coffee-origins__mark">ET</span>
-            <div className="coffee-origins__rings" aria-hidden="true" />
-            <div className="coffee-origins__region-list">
-              {coffeeGroups[2].origins.map((origin, index) => (
-                <span key={origin} style={{ "--index": index } as React.CSSProperties}>
-                  {origin}
-                </span>
+            <div className="coffee-origins__badge">
+              <span>Ethiopian</span>
+              <strong>Green Coffee</strong>
+            </div>
+            <div className="coffee-origins__cards" aria-label="Documented Ethiopian coffee origins">
+              {coffeeGroups[2].origins.map((origin) => (
+                <span key={origin}>{origin}</span>
               ))}
             </div>
           </div>

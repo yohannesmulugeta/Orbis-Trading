@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { siteUrl } from "@/lib/paths";
 
 export const dynamic = "force-static";
 
@@ -21,7 +22,7 @@ const routes = [
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
-    url: `https://orbistrading-ethiopia.com${route}`,
+    url: `${siteUrl}${route}`,
     changeFrequency: route === "" || route === "/news" ? "weekly" : "monthly",
     priority: route === "" ? 1 : 0.7,
   }));

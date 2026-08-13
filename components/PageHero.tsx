@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { assetPath } from "@/lib/paths";
 
 type PageHeroProps = {
   eyebrow: string;
@@ -22,7 +23,7 @@ export function PageHero({
 }: PageHeroProps) {
   return (
     <section className="page-hero">
-      <Image className="page-hero__image" src={image} alt={imageAlt} fill priority sizes="100vw" />
+      <Image className="page-hero__image" src={assetPath(image)} alt={imageAlt} fill priority sizes="100vw" />
       <div className="page-hero__overlay" />
       <div className="container page-hero__content">
         <nav className="breadcrumb" aria-label="Breadcrumb">

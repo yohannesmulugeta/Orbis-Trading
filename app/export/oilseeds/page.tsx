@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { ProductList } from "@/components/ProductList";
 import { SectionHeading } from "@/components/SectionHeading";
 import { oilseeds } from "@/lib/content";
+import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "Ethiopian Oilseeds Export",
@@ -35,7 +36,7 @@ export default function OilseedsPage() {
         </div>
       </section>
       <section className="commodity-banner">
-        <Image src="/assets/pulses-oilseeds.jpg" alt="Ethiopian oilseed products" fill sizes="100vw" />
+        <Image src={assetPath("/assets/pulses-oilseeds.jpg")} alt="Ethiopian oilseed products" fill sizes="100vw" />
         <div className="commodity-banner__overlay" />
         <div className="container commodity-banner__content">
           <p className="eyebrow eyebrow--light">Commercial details</p>

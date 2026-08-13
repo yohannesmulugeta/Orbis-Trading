@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { ProductList } from "@/components/ProductList";
@@ -21,8 +20,8 @@ export default function CoffeePage() {
         eyebrow="Ethiopian Coffee"
         title="Ethiopian coffee. Exported with experience."
         text="Specialty, washed and natural green coffees from origins documented in the ORBIS portfolio."
-        image="/assets/coffee-cherries.jpg"
-        imageAlt="Coffee cherries in Ethiopia"
+        image="/assets/ethiopian-road.jpg"
+        imageAlt="Road through Ethiopian highlands"
         parentLabel="Agricultural Export"
         parentHref="/export/"
       />
@@ -58,9 +57,6 @@ export default function CoffeePage() {
       </section>
 
       <section className="coffee-editorial">
-        <div className="coffee-editorial__image">
-          <Image src="/assets/coffee-cherries.jpg" alt="Ripe coffee cherries" fill sizes="(max-width: 900px) 100vw, 50vw" />
-        </div>
         <div className="coffee-editorial__copy">
           <p className="eyebrow eyebrow--light">Product information</p>
           <h2>Confirmed for every enquiry.</h2>
