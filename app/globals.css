@@ -964,6 +964,54 @@ h3 {
   text-transform: uppercase;
 }
 
+.profile-proof {
+  background: var(--paper);
+}
+
+.profile-proof__grid,
+.company-snapshot__cards,
+.parts-planning__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.profile-proof__grid article,
+.company-snapshot__cards article,
+.parts-planning__grid article {
+  min-height: 280px;
+  padding: 28px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.profile-proof__grid article > span,
+.company-snapshot__cards article > span,
+.parts-planning__grid article > span {
+  display: block;
+  margin-bottom: 70px;
+  color: #7c6509;
+  font-size: 0.67rem;
+  font-weight: 800;
+}
+
+.profile-proof__grid h3,
+.company-snapshot__cards h3,
+.parts-planning__grid h3 {
+  margin-bottom: 14px;
+  font-size: 1.35rem;
+}
+
+.profile-proof__grid p,
+.company-snapshot__cards p,
+.parts-planning__grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
 /* Bus */
 .bus-feature {
   display: grid;
@@ -1561,6 +1609,16 @@ h3 {
   background: var(--paper);
 }
 
+.company-snapshot {
+  background: var(--cream);
+}
+
+.company-snapshot__grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(50px, 8vw, 120px);
+}
+
 .values-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1630,6 +1688,31 @@ h3 {
   color: var(--muted);
   font-size: 0.78rem;
   text-transform: uppercase;
+}
+
+.facility-list {
+  display: grid;
+  gap: 10px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.facility-list li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--muted);
+}
+
+.facility-list li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  content: "";
 }
 
 .facilities-section__image {
@@ -1733,6 +1816,54 @@ h3 {
   font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.dealership-model {
+  background: var(--paper);
+}
+
+.dealership-model__grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(55px, 8vw, 120px);
+}
+
+.dealership-model__grid > div:first-child > p:not(.eyebrow) {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.dealership-model__steps {
+  border-top: 1px solid var(--line);
+}
+
+.dealership-model__steps article {
+  display: grid;
+  grid-template-columns: 52px 0.6fr 1fr;
+  gap: 22px;
+  padding: 23px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.dealership-model__steps span {
+  color: #7c6509;
+  font-size: 0.67rem;
+  font-weight: 800;
+}
+
+.dealership-model__steps h3,
+.dealership-model__steps p {
+  margin: 0;
+}
+
+.dealership-model__steps h3 {
+  font-size: 1.28rem;
+}
+
+.dealership-model__steps p {
+  color: var(--muted);
+  font-size: 0.93rem;
 }
 
 .automotive-application {
@@ -1930,6 +2061,10 @@ h3 {
 
 .bosch-section {
   background: var(--cream);
+}
+
+.parts-planning {
+  background: var(--paper);
 }
 
 .bosch-section__grid {
@@ -2166,6 +2301,53 @@ h3 {
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.export-portfolio {
+  background: var(--cream);
+}
+
+.export-portfolio__grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(55px, 8vw, 120px);
+}
+
+.export-portfolio__grid > div:first-child > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.export-portfolio__lists {
+  border-top: 1px solid var(--line);
+}
+
+.export-portfolio__lists article {
+  display: grid;
+  grid-template-columns: 48px 0.55fr 1fr;
+  gap: 22px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.export-portfolio__lists span {
+  color: #7c6509;
+  font-size: 0.67rem;
+  font-weight: 800;
+}
+
+.export-portfolio__lists h3,
+.export-portfolio__lists p {
+  margin: 0;
+}
+
+.export-portfolio__lists h3 {
+  font-size: 1.25rem;
+}
+
+.export-portfolio__lists p {
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .export-categories {
@@ -2832,6 +3014,7 @@ h3 {
   }
 
   .heritage-intro__grid,
+  .company-snapshot__grid,
   .mercedes-feature__grid,
   .statistics__grid,
   .coffee-origins__grid,
@@ -2839,12 +3022,14 @@ h3 {
   .mission-vision__grid,
   .facilities-section__grid,
   .automotive-application__grid,
+  .dealership-model__grid,
   .split-feature,
   .service-intro__grid,
   .bosch-section__grid,
   .bus-intro__grid,
   .bus-product__grid,
   .export-intro__grid,
+  .export-portfolio__grid,
   .coffee-intro__grid,
   .commodity-page__grid,
   .contact-page__grid {
@@ -2900,7 +3085,10 @@ h3 {
 
   .values-grid,
   .automotive-ecosystem__grid,
-  .export-process__grid {
+  .export-process__grid,
+  .profile-proof__grid,
+  .company-snapshot__cards,
+  .parts-planning__grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -3070,6 +3258,9 @@ h3 {
   .values-grid,
   .automotive-ecosystem__grid,
   .automotive-support__grid,
+  .profile-proof__grid,
+  .company-snapshot__cards,
+  .parts-planning__grid,
   .export-process__grid,
   .assembly-process__list,
   .verification-list {
@@ -3080,6 +3271,9 @@ h3 {
   .values-grid,
   .automotive-ecosystem__grid article,
   .automotive-support__grid article,
+  .profile-proof__grid article,
+  .company-snapshot__cards article,
+  .parts-planning__grid article,
   .export-process__grid article,
   .assembly-process__list article {
     border-right: 0;
@@ -3207,6 +3401,16 @@ h3 {
   }
 
   .service-capabilities article p {
+    grid-column: 2;
+  }
+
+  .dealership-model__steps article,
+  .export-portfolio__lists article {
+    grid-template-columns: 38px 1fr;
+  }
+
+  .dealership-model__steps article p,
+  .export-portfolio__lists article p {
     grid-column: 2;
   }
 

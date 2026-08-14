@@ -3,7 +3,7 @@ import Image from "next/image";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
-import { coreValues, statistics, timeline } from "@/lib/content";
+import { companyHighlights, coreValues, facilityCapabilities, statistics, timeline } from "@/lib/content";
 import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
@@ -41,6 +41,25 @@ export default function AboutPage() {
               automotive sales and support, bus-body assembly, Bosch automotive components
               and Ethiopian agricultural exports.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section company-snapshot">
+        <div className="container company-snapshot__grid">
+          <SectionHeading
+            eyebrow="Company snapshot"
+            title="A business structure built for automotive support."
+            text="The company profile describes ORBIS through its dealership model, facilities, warehouse operation and customer-facing support areas."
+          />
+          <div className="company-snapshot__cards">
+            {companyHighlights.map((item, index) => (
+              <article key={item.label}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{item.label}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -129,6 +148,11 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
+            <ul className="facility-list" aria-label="Documented ORBIS facility capabilities">
+              {facilityCapabilities.map((capability) => (
+                <li key={capability}>{capability}</li>
+              ))}
+            </ul>
           </div>
           <div className="facilities-section__image">
             <Image

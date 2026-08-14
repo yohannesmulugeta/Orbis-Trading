@@ -4,6 +4,7 @@ import Link from "next/link";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { coffeeGroups, oilseeds, pulses } from "@/lib/content";
 import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
@@ -87,6 +88,37 @@ export default function ExportPage() {
               <strong>Explore pulses ↗</strong>
             </div>
           </Link>
+        </div>
+      </section>
+
+      <section className="section export-portfolio">
+        <div className="container export-portfolio__grid">
+          <div>
+            <p className="eyebrow">Documented export portfolio</p>
+            <h2>Clear product groups before the commercial discussion starts.</h2>
+            <p>
+              The supplied ORBIS profile lists Ethiopian green coffee categories, oilseeds
+              and pulses. The website now presents those groups clearly while leaving
+              grade, crop, packaging and availability for direct confirmation.
+            </p>
+          </div>
+          <div className="export-portfolio__lists">
+            <article>
+              <span>01</span>
+              <h3>Coffee categories</h3>
+              <p>{coffeeGroups.map((group) => group.name).join(", ")}</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Oilseeds</h3>
+              <p>{oilseeds.join(", ")}</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Pulses</h3>
+              <p>{pulses.join(", ")}</p>
+            </article>
+          </div>
         </div>
       </section>
 

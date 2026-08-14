@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLink } from "@/components/ArrowLink";
 import { InquiryCta } from "@/components/InquiryCta";
 import { SectionHeading } from "@/components/SectionHeading";
-import { coffeeGroups, services, statistics, timeline } from "@/lib/content";
+import { coffeeGroups, companyHighlights, services, statistics, timeline } from "@/lib/content";
 import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
@@ -97,6 +97,25 @@ export default function HomePage() {
                 <span className="timeline__index">{String(index + 1).padStart(2, "0")}</span>
                 <p className="timeline__year">{item.year}</p>
                 <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section profile-proof">
+        <div className="container">
+          <SectionHeading
+            eyebrow="From the company profile"
+            title="The practical details behind the brand."
+            text="These points make the ORBIS story more than a heritage claim: they show the operating structure behind sales, service, parts and vehicle handling."
+          />
+          <div className="profile-proof__grid">
+            {companyHighlights.map((item, index) => (
+              <article key={item.label}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{item.label}</h3>
                 <p>{item.text}</p>
               </article>
             ))}

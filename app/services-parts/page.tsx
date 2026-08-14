@@ -4,6 +4,7 @@ import Link from "next/link";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { aftersalesFocus } from "@/lib/content";
 import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
@@ -71,6 +72,25 @@ export default function ServicesPartsPage() {
           <Link className="button button--gold" href="/contact/">
             Request spare-parts support <span aria-hidden="true">↗</span>
           </Link>
+        </div>
+      </section>
+
+      <section className="section parts-planning">
+        <div className="container">
+          <SectionHeading
+            eyebrow="How parts support is planned"
+            title="A more complete view of aftersales capability."
+            text="The company profile explains that ORBIS plans parts support around maintenance needs, brand standards and partner recommendations."
+          />
+          <div className="parts-planning__grid">
+            {aftersalesFocus.map((item, index) => (
+              <article key={item.title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

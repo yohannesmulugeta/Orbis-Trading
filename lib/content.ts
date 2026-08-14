@@ -74,6 +74,33 @@ export const statistics = [
   { value: "3", label: "Continents reached by export" },
 ];
 
+export const companyHighlights = [
+  {
+    label: "3S dealership model",
+    text: "Sales, service and spare parts are presented together for the brands ORBIS represents.",
+  },
+  {
+    label: "Facility footprint",
+    text: "The company profile documents a 17,616 m² facility area in Addis Ababa.",
+  },
+  {
+    label: "Parts operation",
+    text: "The warehouse operation includes around 16,000 spare-parts line items.",
+  },
+  {
+    label: "Vehicle handling",
+    text: "The premises include workshop operations, annual inspection and a customs-bonded warehouse for new vehicles.",
+  },
+];
+
+export const facilityCapabilities = [
+  "Comprehensive vehicle maintenance workshop",
+  "Automated vehicle annual inspection workshop",
+  "Warehouse for spare-parts storage and handling",
+  "Parts counter designed for customer convenience",
+  "Customs-bonded warehouse for new vehicles",
+];
+
 export const services = [
   {
     number: "01",
@@ -110,6 +137,25 @@ export const coreValues = [
   "Promptness and accountability",
   "Active social responsibility",
   "Zero tolerance for unethical practices",
+];
+
+export const aftersalesFocus = [
+  {
+    title: "Training",
+    text: "The aftersales team is described as engineers and technicians receiving online and in-person brand-standard training.",
+  },
+  {
+    title: "Maintenance planning",
+    text: "Parts planning considers preventive maintenance, routine maintenance and service-part consumption.",
+  },
+  {
+    title: "Body and mechanical parts",
+    text: "The spare-parts operation supports body and mechanical part needs for represented brands.",
+  },
+  {
+    title: "Partner recommendations",
+    text: "Supplier and partner recommendations help ORBIS improve stock management and customer support.",
+  },
 ];
 
 export const coffeeGroups = [

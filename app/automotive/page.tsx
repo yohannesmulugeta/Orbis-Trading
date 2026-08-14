@@ -95,6 +95,33 @@ export default function AutomotivePage() {
         </div>
       </section>
 
+      <section className="section dealership-model">
+        <div className="container dealership-model__grid">
+          <div>
+            <p className="eyebrow">3S dealership model</p>
+            <h2>Sales, service and spare parts presented as one customer journey.</h2>
+            <p>
+              The ORBIS company profile identifies the represented automotive brands through
+              a 3S dealership model: Sales, Service and Spare Parts. This helps visitors
+              understand that the relationship continues after the first vehicle discussion.
+            </p>
+          </div>
+          <div className="dealership-model__steps">
+            {[
+              ["01", "Sales", "Vehicle categories and availability are confirmed directly by the automotive team."],
+              ["02", "Service", "Workshop and technical support continue through the ownership lifecycle."],
+              ["03", "Spare parts", "An organized parts operation supports represented brands and maintenance needs."],
+            ].map(([number, title, text]) => (
+              <article key={title}>
+                <span>{number}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section automotive-application">
         <div className="container automotive-application__grid">
           <div>
