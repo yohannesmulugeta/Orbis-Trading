@@ -21,6 +21,10 @@ export function Footer() {
             An Ethiopian automotive, engineering and international trading company with a
             heritage dating to 1950.
           </p>
+          <p className="site-footer__summary">
+            Vehicle sales, service, spare parts, bus assembly and export enquiries are
+            directed to the appropriate ORBIS team.
+          </p>
         </div>
 
         <div>

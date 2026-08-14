@@ -9,7 +9,7 @@ import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
-  title: "Over 75 Years of Driving Ethiopia Forward",
+  title: "Serving Ethiopia Since 1950",
   description:
     "Discover ORBIS's automotive heritage, Mercedes-Benz story, aftersales capability, bus assembly and Ethiopian agricultural export business.",
 };
@@ -36,12 +36,12 @@ export default function HomePage() {
             <span>Addis Ababa, Ethiopia</span>
           </div>
           <h1>
-            <span>Over 75 Years of</span>
-            Driving Ethiopia Forward
+            <span>Serving Ethiopia Since 1950</span>
+            Automotive, Service & Trade
           </h1>
           <p>
-            Automotive heritage, engineering capability and international trade built over
-            generations.
+            ORBIS brings together vehicle sales, technical service, spare parts, local
+            bus-body assembly and agricultural export activity from Addis Ababa.
           </p>
           <div className="home-hero__actions">
             <Link className="button button--gold" href="/about/">
@@ -70,7 +70,7 @@ export default function HomePage() {
           </div>
           <div className="heritage-intro__copy">
             <p className="eyebrow">A legacy built over generations</p>
-            <h2>From a modest office in 1950 to a diversified Ethiopian institution.</h2>
+            <h2>From Menelik Square to a diversified Ethiopian company.</h2>
             <p>
               ORBIS began at Menelik Square when Ethiopia’s automotive market was still in
               its early years. Its forward-looking founders built a business that grew across
@@ -152,8 +152,8 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Automotive division"
-            title="World-class mobility. Local expertise."
-            text="Explore the brands represented within ORBIS's automotive portfolio. Current model availability is confirmed directly by the sales team."
+            title="Automotive brands with local support."
+            text="Explore the brands represented within ORBIS's automotive portfolio, backed by sales, service and spare-parts support."
           />
           <div className="brand-showcase__grid">
             <Link className="brand-card brand-card--wide" href="/automotive/mercedes-benz/">
@@ -214,8 +214,8 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Complete automotive support"
-            title="More than vehicle sales."
-            text="A connected support ecosystem designed around the vehicle ownership journey."
+            title="Support after the sale."
+            text="Sales, service, spare parts and technical assistance are presented as one connected ownership experience."
           />
           <div className="services-overview__list">
             {services.map((service) => (
@@ -366,8 +366,8 @@ export default function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="ORBIS stories"
-            title="A company in motion."
-            text="Three connected stories define the ORBIS of today."
+            title="Three business lines, one company."
+            text="ORBIS is presented through automotive heritage, local assembly capability and Ethiopian export activity."
           />
           <div className="corporate-stories__grid">
             {[
@@ -402,8 +402,8 @@ export default function HomePage() {
       </section>
 
       <InquiryCta
-        eyebrow="What's next"
-        title="Let's build what's next."
+        eyebrow="Enquiries"
+        title="Talk to the ORBIS team."
         text="Vehicle, service, spare-parts, bus-assembly and export enquiries are routed to the relevant ORBIS team."
         button="Start an enquiry"
       />

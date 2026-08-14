@@ -82,16 +82,16 @@ p {
 h1,
 h2,
 h3 {
-  line-height: 1.04;
-  letter-spacing: -0.04em;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
 }
 
 h1 {
-  font-size: clamp(3.5rem, 8vw, 8.5rem);
+  font-size: clamp(3.25rem, 6.6vw, 7rem);
 }
 
 h2 {
-  font-size: clamp(2.35rem, 5vw, 5.4rem);
+  font-size: clamp(2.15rem, 4.35vw, 4.7rem);
 }
 
 h3 {
@@ -104,7 +104,7 @@ h3 {
 }
 
 .section {
-  padding: clamp(88px, 10vw, 160px) 0;
+  padding: clamp(80px, 8.5vw, 132px) 0;
 }
 
 .section--cream {
@@ -393,7 +393,7 @@ h3 {
 .home-hero {
   position: relative;
   display: flex;
-  min-height: max(760px, 100svh);
+  min-height: max(690px, 92svh);
   align-items: flex-end;
   overflow: hidden;
   color: var(--white);
@@ -403,7 +403,7 @@ h3 {
 .home-hero__background {
   object-fit: cover;
   object-position: center;
-  filter: saturate(0.72) contrast(1.06);
+  filter: saturate(0.86) contrast(1.02);
   transform: scale(1.02);
   animation: hero-scale 13s var(--ease) both;
 }
@@ -421,8 +421,8 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(12, 13, 17, 0.95) 0%, rgba(12, 13, 17, 0.7) 46%, rgba(12, 13, 17, 0.18) 78%),
-    linear-gradient(0deg, rgba(12, 13, 17, 0.78), transparent 55%);
+    linear-gradient(90deg, rgba(12, 13, 17, 0.88) 0%, rgba(12, 13, 17, 0.62) 46%, rgba(12, 13, 17, 0.2) 78%),
+    linear-gradient(0deg, rgba(12, 13, 17, 0.68), transparent 55%);
 }
 
 .home-hero__content {
@@ -449,9 +449,9 @@ h3 {
 }
 
 .home-hero h1 {
-  max-width: 1100px;
+  max-width: 980px;
   margin-bottom: 28px;
-  font-size: clamp(4.2rem, 7.9vw, 8.2rem);
+  font-size: clamp(3.7rem, 6.6vw, 6.9rem);
 }
 
 .home-hero h1 span {
@@ -462,10 +462,10 @@ h3 {
 }
 
 .home-hero__content > p {
-  max-width: 650px;
+  max-width: 730px;
   margin-bottom: 38px;
   color: rgba(255, 255, 255, 0.76);
-  font-size: clamp(1.08rem, 1.65vw, 1.38rem);
+  font-size: clamp(1.02rem, 1.35vw, 1.24rem);
 }
 
 .home-hero__actions {
@@ -479,8 +479,8 @@ h3 {
   z-index: 1;
   top: 50%;
   right: -0.06em;
-  color: rgba(255, 255, 255, 0.06);
-  font-size: clamp(18rem, 38vw, 42rem);
+  color: rgba(255, 255, 255, 0.045);
+  font-size: clamp(15rem, 32vw, 35rem);
   font-weight: 900;
   letter-spacing: -0.12em;
   line-height: 0.7;
@@ -541,7 +541,7 @@ h3 {
 .heritage-intro__number {
   position: relative;
   color: var(--ink);
-  font-size: clamp(11rem, 26vw, 27rem);
+  font-size: clamp(10rem, 22vw, 23rem);
   font-weight: 900;
   letter-spacing: -0.13em;
   line-height: 0.72;
@@ -566,7 +566,7 @@ h3 {
 
 .heritage-intro__copy h2 {
   margin-bottom: 32px;
-  font-size: clamp(2.5rem, 4.6vw, 5.2rem);
+  font-size: clamp(2.25rem, 4vw, 4.4rem);
 }
 
 .heritage-intro__copy > p:not(.eyebrow) {
@@ -678,7 +678,7 @@ h3 {
 
 .mercedes-feature__copy h2 {
   margin-bottom: 30px;
-  font-size: clamp(2.7rem, 5vw, 5.7rem);
+  font-size: clamp(2.35rem, 4.25vw, 4.8rem);
 }
 
 .mercedes-feature__copy > p:not(.eyebrow) {
@@ -786,7 +786,7 @@ h3 {
 .brand-card {
   position: relative;
   display: grid;
-  min-height: 560px;
+  min-height: 520px;
   grid-template-rows: 1fr auto;
   overflow: hidden;
   background: var(--cream);
@@ -794,12 +794,12 @@ h3 {
 }
 
 .brand-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
 }
 
 .brand-card--wide {
   grid-row: span 2;
-  min-height: 1146px;
+  min-height: 1066px;
 }
 
 .brand-card--dark {
@@ -813,7 +813,7 @@ h3 {
 }
 
 .brand-card--wide .brand-card__image {
-  min-height: 770px;
+  min-height: 700px;
 }
 
 .brand-card__image img {
@@ -847,7 +847,7 @@ h3 {
 
 .brand-card__copy h3 {
   margin-bottom: 12px;
-  font-size: clamp(2rem, 4vw, 4.3rem);
+  font-size: clamp(1.9rem, 3.3vw, 3.5rem);
 }
 
 .brand-card__copy p {
@@ -1315,7 +1315,7 @@ h3 {
 .page-hero {
   position: relative;
   display: flex;
-  min-height: 680px;
+  min-height: 620px;
   align-items: flex-end;
   overflow: hidden;
   color: var(--white);
@@ -1324,26 +1324,26 @@ h3 {
 
 .page-hero__image {
   object-fit: cover;
-  filter: saturate(0.75) contrast(1.05);
+  filter: saturate(0.86) contrast(1.02);
 }
 
 .page-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(12, 13, 17, 0.92), rgba(12, 13, 17, 0.25)),
-    linear-gradient(0deg, rgba(12, 13, 17, 0.78), transparent 55%);
+  background: linear-gradient(90deg, rgba(12, 13, 17, 0.86), rgba(12, 13, 17, 0.32)),
+    linear-gradient(0deg, rgba(12, 13, 17, 0.66), transparent 55%);
 }
 
 .page-hero__content {
   position: relative;
   z-index: 1;
-  padding: calc(var(--header-height) + 110px) 0 90px;
+  padding: calc(var(--header-height) + 125px) 0 82px;
 }
 
 .breadcrumb {
   display: flex;
   gap: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 36px;
   color: rgba(255, 255, 255, 0.55);
   font-size: 0.7rem;
   font-weight: 700;
@@ -1356,9 +1356,9 @@ h3 {
 }
 
 .page-hero h1 {
-  max-width: 1160px;
+  max-width: 980px;
   margin-bottom: 25px;
-  font-size: clamp(3.5rem, 7vw, 7.5rem);
+  font-size: clamp(3rem, 5.6vw, 6rem);
 }
 
 .page-hero__content > p:last-child {
@@ -1380,12 +1380,12 @@ h3 {
 
 .inquiry-cta__inner {
   display: grid;
-  min-height: 500px;
+  min-height: 410px;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
   gap: clamp(50px, 8vw, 120px);
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 72px;
+  padding-bottom: 72px;
 }
 
 .inquiry-cta h2 {
@@ -2180,14 +2180,14 @@ h3 {
 
 .export-category {
   position: relative;
-  min-height: 450px;
+  min-height: 400px;
   overflow: hidden;
   color: var(--white);
 }
 
 .export-category--coffee {
   grid-row: span 2;
-  min-height: 924px;
+  min-height: 824px;
   background:
     radial-gradient(circle at 30% 18%, rgba(255, 122, 26, 0.26), transparent 30%),
     radial-gradient(circle at 82% 75%, rgba(8, 104, 216, 0.28), transparent 34%),
@@ -2203,17 +2203,19 @@ h3 {
 
 .export-category > img {
   object-fit: cover;
-  transition: transform 600ms var(--ease);
+  filter: saturate(0.95) contrast(1.02);
+  transition: transform 700ms var(--ease), filter 700ms ease;
 }
 
 .export-category:hover > img {
-  transform: scale(1.04);
+  filter: saturate(1.04) contrast(1.04);
+  transform: scale(1.025);
 }
 
 .export-category__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(10, 12, 10, 0.88), rgba(10, 12, 10, 0.08));
+  background: linear-gradient(0deg, rgba(10, 12, 10, 0.82), rgba(10, 12, 10, 0.16));
 }
 
 .export-category__copy {
@@ -2236,7 +2238,7 @@ h3 {
 
 .export-category__copy h2 {
   margin-bottom: 18px;
-  font-size: clamp(2.5rem, 5vw, 5.5rem);
+  font-size: clamp(2.2rem, 4vw, 4.2rem);
 }
 
 .export-category__copy p {
@@ -2592,16 +2594,16 @@ h3 {
 
 .site-footer__grid {
   display: grid;
-  grid-template-columns: 1.5fr 0.7fr 1fr;
-  gap: clamp(60px, 9vw, 140px);
-  padding-top: 95px;
-  padding-bottom: 90px;
+  grid-template-columns: 1.25fr 0.7fr 1fr;
+  gap: clamp(44px, 7vw, 105px);
+  padding-top: 70px;
+  padding-bottom: 66px;
 }
 
 .site-footer__logo-wrap {
-  width: min(310px, 100%);
-  margin-bottom: 28px;
-  padding: 8px 12px;
+  width: min(280px, 100%);
+  margin-bottom: 24px;
+  padding: 7px 11px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 18px;
   background: #030912;
@@ -2616,10 +2618,10 @@ h3 {
 
 .motion-ready {
   opacity: 0;
-  transform: translate3d(0, 26px, 0);
+  transform: translate3d(0, 18px, 0);
   transition:
-    opacity 720ms ease,
-    transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 560ms ease,
+    transform 560ms cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--motion-delay, 0ms);
   will-change: opacity, transform;
 }
@@ -2631,7 +2633,14 @@ h3 {
 
 .site-footer__brand > p {
   max-width: 470px;
+  margin-bottom: 18px;
   color: rgba(255, 255, 255, 0.55);
+}
+
+.site-footer__summary {
+  padding-left: 18px;
+  border-left: 2px solid var(--gold);
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 
 .footer-title {
@@ -2645,7 +2654,7 @@ h3 {
 
 .footer-links {
   display: grid;
-  gap: 10px;
+  gap: 11px;
 }
 
 .footer-links a,
@@ -2939,7 +2948,7 @@ h3 {
   }
 
   .home-hero {
-    min-height: 790px;
+    min-height: 730px;
   }
 
   .home-hero__overlay {
@@ -2961,7 +2970,7 @@ h3 {
   }
 
   .home-hero h1 {
-    font-size: clamp(3.5rem, 17vw, 5.5rem);
+    font-size: clamp(3.1rem, 14vw, 4.8rem);
   }
 
   .home-hero__actions {
@@ -3035,13 +3044,13 @@ h3 {
   .brand-card--wide,
   .export-category,
   .export-category--coffee {
-    min-height: 580px;
+    min-height: 520px;
     grid-row: auto;
   }
 
   .brand-card__image,
   .brand-card--wide .brand-card__image {
-    min-height: 370px;
+    min-height: 330px;
   }
 
   .brand-card__copy p {
@@ -3131,17 +3140,18 @@ h3 {
   }
 
   .inquiry-cta__inner {
-    min-height: 600px;
+    min-height: 460px;
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
   .page-hero {
-    min-height: 620px;
+    min-height: 580px;
   }
 
   .page-hero__content {
-    padding-bottom: 65px;
+    padding-top: calc(var(--header-height) + 90px);
+    padding-bottom: 60px;
   }
 
   .breadcrumb {

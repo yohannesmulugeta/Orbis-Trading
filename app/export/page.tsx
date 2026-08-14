@@ -18,8 +18,8 @@ export default function ExportPage() {
     <>
       <PageHero
         eyebrow="Agricultural Export"
-        title="Ethiopian origin. Global reach."
-        text="Selected Ethiopian coffee, oilseeds and pulses for international markets."
+        title="Agricultural export from Ethiopia."
+        text="Coffee, oilseeds and pulses are presented for international product enquiries."
         image={webImages.ethiopianCoffee}
         imageAlt="Ethiopian coffee beans being roasted"
       />
@@ -28,8 +28,8 @@ export default function ExportPage() {
         <div className="container export-intro__grid">
           <SectionHeading
             eyebrow="From Ethiopia to the world"
-            title="Three product groups. Three continental markets."
-            text="The ORBIS company profile documents agricultural export activity across Asia, Europe and the Americas. Specific destinations, grades, packaging and availability are confirmed per enquiry."
+            title="Coffee, oilseeds and pulses for export enquiries."
+            text="ORBIS presents agricultural export activity across Asia, Europe and the Americas. Product grade, packaging, volume and availability are confirmed directly for each enquiry."
           />
           <div className="global-reach">
             <div className="global-reach__origin">
@@ -63,7 +63,7 @@ export default function ExportPage() {
             <div className="export-category__copy">
               <span>01 / Primary category</span>
               <h2>Ethiopian Coffee</h2>
-              <p>Specialty, washed and natural green coffees from documented origins.</p>
+              <p>Green coffee categories and origins are confirmed against current availability.</p>
               <strong>Explore coffee ↗</strong>
             </div>
           </Link>
@@ -73,6 +73,7 @@ export default function ExportPage() {
             <div className="export-category__copy">
               <span>02</span>
               <h2>Oilseeds</h2>
+              <p>Product detail, packaging and availability are confirmed per enquiry.</p>
               <strong>Explore oilseeds ↗</strong>
             </div>
           </Link>
@@ -82,6 +83,7 @@ export default function ExportPage() {
             <div className="export-category__copy">
               <span>03</span>
               <h2>Pulses</h2>
+              <p>Export requirements are reviewed by product, quantity and destination.</p>
               <strong>Explore pulses ↗</strong>
             </div>
           </Link>
@@ -92,8 +94,8 @@ export default function ExportPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Export enquiry process"
-            title="From product interest to confirmed requirement."
-            text="A simple, transparent route for beginning a commercial conversation."
+            title="A clear route for product enquiries."
+            text="The page keeps the first step simple while detailed commercial terms are handled directly by the export team."
             theme="dark"
           />
           <div className="export-process__grid">
