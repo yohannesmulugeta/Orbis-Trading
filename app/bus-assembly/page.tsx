@@ -3,6 +3,7 @@ import Image from "next/image";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
@@ -26,8 +27,8 @@ export default function BusAssemblyPage() {
         eyebrow="Bus Body Assembly"
         title="Built for Ethiopian roads."
         text="Mercedes-Benz chassis and engines combined with local engineering, body construction, testing and support."
-        image="/assets/ethiopian-road.jpg"
-        imageAlt="Road through an Ethiopian landscape"
+        image={webImages.ethiopianBus}
+        imageAlt="Passenger bus in Ethiopia"
       />
 
       <section className="section bus-intro">
@@ -55,8 +56,8 @@ export default function BusAssemblyPage() {
         <div className="container bus-product__grid">
           <div className="bus-product__image">
             <Image
-              src={assetPath("/assets/orbis-bus.jpg")}
-              alt="ORBIS assembled passenger bus"
+              src={assetPath(webImages.ethiopianBus)}
+              alt="Passenger bus in Ethiopia"
               fill
               sizes="(max-width: 900px) 100vw, 55vw"
             />
@@ -93,7 +94,12 @@ export default function BusAssemblyPage() {
       </section>
 
       <section className="workshop-banner">
-        <Image src={assetPath("/assets/bus-workshop.jpg")} alt="ORBIS bus assembly workshop" fill sizes="100vw" />
+        <Image
+          src={assetPath(webImages.automotiveWorkshop)}
+          alt="Real automotive workshop interior"
+          fill
+          sizes="100vw"
+        />
         <div className="workshop-banner__overlay" />
         <div className="container workshop-banner__content">
           <p className="eyebrow eyebrow--light">Inside ORBIS</p>

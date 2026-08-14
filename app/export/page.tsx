@@ -4,6 +4,7 @@ import Link from "next/link";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
@@ -19,8 +20,8 @@ export default function ExportPage() {
         eyebrow="Agricultural Export"
         title="Ethiopian origin. Global reach."
         text="Selected Ethiopian coffee, oilseeds and pulses for international markets."
-        image="/assets/ethiopian-road.jpg"
-        imageAlt="Road through Ethiopian highlands"
+        image={webImages.ethiopianCoffee}
+        imageAlt="Ethiopian coffee beans being roasted"
       />
 
       <section className="section export-intro">
@@ -52,6 +53,13 @@ export default function ExportPage() {
       <section className="section export-categories">
         <div className="container export-categories__grid">
           <Link className="export-category export-category--coffee" href="/export/coffee/">
+            <Image
+              src={assetPath(webImages.ethiopianCoffee)}
+              alt="Ethiopian coffee beans being roasted"
+              fill
+              sizes="(max-width: 900px) 100vw, 40vw"
+            />
+            <div className="export-category__overlay" />
             <div className="export-category__copy">
               <span>01 / Primary category</span>
               <h2>Ethiopian Coffee</h2>

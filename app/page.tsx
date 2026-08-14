@@ -5,6 +5,7 @@ import { ArrowLink } from "@/components/ArrowLink";
 import { InquiryCta } from "@/components/InquiryCta";
 import { SectionHeading } from "@/components/SectionHeading";
 import { coffeeGroups, services, statistics, timeline } from "@/lib/content";
+import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
@@ -133,7 +134,7 @@ export default function HomePage() {
               ✦
             </span>
             <Image
-              src={assetPath("/assets/mercedes-sprinter.jpg")}
+              src={assetPath(webImages.mercedesSprinter)}
               alt="Mercedes-Benz Sprinter vehicle"
               fill
               sizes="(max-width: 900px) 100vw, 55vw"
@@ -158,8 +159,8 @@ export default function HomePage() {
             <Link className="brand-card brand-card--wide" href="/automotive/mercedes-benz/">
               <div className="brand-card__image">
                 <Image
-                  src={assetPath("/assets/mercedes-truck.jpg")}
-                  alt="ORBIS Mercedes-Benz showroom in Addis Ababa"
+                  src={assetPath(webImages.mercedesSprinter)}
+                  alt="Mercedes-Benz Sprinter passenger van"
                   fill
                   sizes="(max-width: 900px) 100vw, 60vw"
                 />
@@ -175,8 +176,8 @@ export default function HomePage() {
             <Link className="brand-card" href="/automotive/renault/">
               <div className="brand-card__image">
                 <Image
-                  src={assetPath("/assets/renault-duster.jpg")}
-                  alt="ORBIS Renault showroom frontage"
+                  src={assetPath(webImages.renaultDuster)}
+                  alt="Renault Duster SUV"
                   fill
                   sizes="(max-width: 900px) 100vw, 40vw"
                 />
@@ -192,8 +193,8 @@ export default function HomePage() {
             <Link className="brand-card brand-card--dark" href="/automotive/mitsubishi-fuso/">
               <div className="brand-card__image">
                 <Image
-                  src={assetPath("/assets/fuso-truck.jpg")}
-                  alt="ORBIS Mitsubishi Fuso showroom frontage"
+                  src={assetPath(webImages.mitsubishiFuso)}
+                  alt="Mitsubishi Fuso Canter truck"
                   fill
                   sizes="(max-width: 900px) 100vw, 40vw"
                 />
@@ -249,8 +250,8 @@ export default function HomePage() {
       <section className="bus-feature">
         <div className="bus-feature__media">
           <Image
-            src={assetPath("/assets/bus-workshop.jpg")}
-            alt="ORBIS bus assembly workshop"
+            src={assetPath(webImages.automotiveWorkshop)}
+            alt="Real automotive workshop interior"
             fill
             sizes="(max-width: 900px) 100vw, 50vw"
           />
@@ -284,6 +285,13 @@ export default function HomePage() {
       </section>
 
       <section className="export-feature">
+        <Image
+          className="export-feature__background"
+          src={assetPath(webImages.ethiopianCoffee)}
+          alt="Ethiopian coffee roasting scene"
+          fill
+          sizes="100vw"
+        />
         <div className="export-feature__overlay" />
         <div className="container export-feature__content">
           <p className="eyebrow eyebrow--light">Agricultural export</p>
@@ -315,6 +323,13 @@ export default function HomePage() {
       <section className="section coffee-origins">
         <div className="container coffee-origins__grid">
           <div className="coffee-origins__visual">
+            <Image
+              src={assetPath(webImages.ethiopianCoffee)}
+              alt="Ethiopian coffee beans being roasted"
+              fill
+              sizes="(max-width: 900px) 100vw, 50vw"
+            />
+            <div className="coffee-origins__shade" />
             <div className="coffee-origins__badge">
               <span>Ethiopian</span>
               <strong>Green Coffee</strong>

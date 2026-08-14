@@ -4,6 +4,7 @@ import Link from "next/link";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
@@ -19,8 +20,8 @@ export default function ServicesPartsPage() {
         eyebrow="Services & Parts"
         title="Support that continues beyond the sale."
         text="Workshop capability, experienced technicians, organized spare-parts support and Bosch automotive components."
-        image="/assets/bus-workshop.jpg"
-        imageAlt="ORBIS technical workshop"
+        image={webImages.automotiveWorkshop}
+        imageAlt="Real automotive workshop interior"
       />
 
       <section className="section service-intro" id="service">

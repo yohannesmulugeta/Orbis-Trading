@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { MotionEnhancer } from "@/components/MotionEnhancer";
 import { siteUrl } from "@/lib/paths";
 
 export const metadata: Metadata = {
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           Skip to content
         </a>
         <Header />
+        <MotionEnhancer />
         <main id="main-content">{children}</main>
         <Footer />
         <script

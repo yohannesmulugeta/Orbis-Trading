@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BrandPage } from "@/components/BrandPage";
+import { webImages } from "@/lib/media";
 
 export const metadata: Metadata = {
   title: "Mitsubishi Fuso",
@@ -13,10 +14,10 @@ export default function MitsubishiFusoPage() {
       brand="Mitsubishi Fuso"
       title="Commercial mobility for demanding applications."
       intro="Commercial vehicle categories designed for logistics, construction, public transport and other business uses."
-      heroImage="/assets/fuso-truck.jpg"
-      heroAlt="ORBIS Mitsubishi Fuso showroom frontage"
-      featureImage="/assets/fuso-truck.jpg"
-      featureAlt="ORBIS Mitsubishi Fuso showroom frontage"
+      heroImage={webImages.mitsubishiFuso}
+      heroAlt="Mitsubishi Fuso Canter truck"
+      featureImage={webImages.mitsubishiFuso}
+      featureAlt="Mitsubishi Fuso Canter truck"
       categories={["Light-Duty Applications", "Medium-Duty Applications", "Heavy-Duty Applications"]}
       capabilityTitle="Built around the needs of working businesses."
       capabilityText="ORBIS presents Mitsubishi Fuso within its commercial automotive portfolio. Vehicle models, configurations and availability are intentionally confirmed through a direct enquiry."

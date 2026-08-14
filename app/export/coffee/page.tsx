@@ -4,6 +4,7 @@ import { PageHero } from "@/components/PageHero";
 import { ProductList } from "@/components/ProductList";
 import { SectionHeading } from "@/components/SectionHeading";
 import { coffeeGroups } from "@/lib/content";
+import { webImages } from "@/lib/media";
 
 export const metadata: Metadata = {
   title: "Ethiopian Green Coffee Export",
@@ -20,8 +21,8 @@ export default function CoffeePage() {
         eyebrow="Ethiopian Coffee"
         title="Ethiopian coffee. Exported with experience."
         text="Specialty, washed and natural green coffees from origins documented in the ORBIS portfolio."
-        image="/assets/ethiopian-road.jpg"
-        imageAlt="Road through Ethiopian highlands"
+        image={webImages.ethiopianCoffee}
+        imageAlt="Ethiopian coffee beans being roasted"
         parentLabel="Agricultural Export"
         parentHref="/export/"
       />

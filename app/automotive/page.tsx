@@ -5,6 +5,7 @@ import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { services } from "@/lib/content";
+import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
@@ -18,21 +19,21 @@ const brands = [
     number: "01",
     name: "Mercedes-Benz",
     text: "The flagship ORBIS automotive story across passenger and commercial mobility.",
-    image: "/assets/mercedes-sprinter.jpg",
+    image: webImages.mercedesSprinter,
     href: "/automotive/mercedes-benz/",
   },
   {
     number: "02",
     name: "Renault",
     text: "Passenger and commercial vehicle categories supported by ORBIS.",
-    image: "/assets/renault-kangoo.jpg",
+    image: webImages.renaultDuster,
     href: "/automotive/renault/",
   },
   {
     number: "03",
     name: "Mitsubishi Fuso",
     text: "Commercial vehicles for a range of business and transport applications.",
-    image: "/assets/fuso-truck.jpg",
+    image: webImages.mitsubishiFuso,
     href: "/automotive/mitsubishi-fuso/",
   },
 ];
@@ -44,8 +45,8 @@ export default function AutomotivePage() {
         eyebrow="Automotive"
         title="Automotive excellence since 1950."
         text="International automotive brands supported by local sales, service and technical experience."
-        image="/assets/mercedes-truck.jpg"
-        imageAlt="ORBIS Mercedes-Benz and FUSO showroom frontage"
+        image={webImages.mercedesSprinter}
+        imageAlt="Mercedes-Benz Sprinter passenger van"
       />
 
       <section className="section automotive-brands-page">
@@ -110,7 +111,7 @@ export default function AutomotivePage() {
           </div>
           <div className="automotive-application__image">
             <Image
-              src={assetPath("/assets/mercedes-sprinter.jpg")}
+              src={assetPath(webImages.mercedesSprinter)}
               alt="Mercedes-Benz Sprinter commercial vehicle"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"
