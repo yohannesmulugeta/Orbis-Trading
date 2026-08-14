@@ -14,9 +14,9 @@ export default function MitsubishiFusoPage() {
       title="Commercial mobility for demanding applications."
       intro="Commercial vehicle categories designed for logistics, construction, public transport and other business uses."
       heroImage="/assets/fuso-truck.jpg"
-      heroAlt="Mitsubishi Fuso commercial vehicle"
+      heroAlt="ORBIS Mitsubishi Fuso showroom frontage"
       featureImage="/assets/fuso-truck.jpg"
-      featureAlt="Mitsubishi Fuso truck"
+      featureAlt="ORBIS Mitsubishi Fuso showroom frontage"
       categories={["Light-Duty Applications", "Medium-Duty Applications", "Heavy-Duty Applications"]}
       capabilityTitle="Built around the needs of working businesses."
       capabilityText="ORBIS presents Mitsubishi Fuso within its commercial automotive portfolio. Vehicle models, configurations and availability are intentionally confirmed through a direct enquiry."

@@ -17,7 +17,7 @@ export default function ContactPage() {
         title="One company. The right team for every enquiry."
         text="Choose your area of interest and connect with ORBIS in Addis Ababa."
         image="/assets/orbis-showroom.jpg"
-        imageAlt="ORBIS showroom and vehicle inspection area"
+        imageAlt="ORBIS Trading and Technical Center building in Addis Ababa"
       />
       <section className="section contact-page">
         <div className="container contact-page__grid">

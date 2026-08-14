@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${siteUrl}/assets/orbis-building.jpg`,
-        width: 1282,
-        height: 986,
+        width: 1600,
+        height: 900,
         alt: "ORBIS Trading and Technical Centre in Addis Ababa",
       },
     ],

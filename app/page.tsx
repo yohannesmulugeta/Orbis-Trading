@@ -159,7 +159,7 @@ export default function HomePage() {
               <div className="brand-card__image">
                 <Image
                   src={assetPath("/assets/mercedes-truck.jpg")}
-                  alt="Mercedes-Benz commercial vehicle"
+                  alt="ORBIS Mercedes-Benz showroom in Addis Ababa"
                   fill
                   sizes="(max-width: 900px) 100vw, 60vw"
                 />
@@ -176,7 +176,7 @@ export default function HomePage() {
               <div className="brand-card__image">
                 <Image
                   src={assetPath("/assets/renault-duster.jpg")}
-                  alt="Renault passenger vehicle"
+                  alt="ORBIS Renault showroom frontage"
                   fill
                   sizes="(max-width: 900px) 100vw, 40vw"
                 />
@@ -193,7 +193,7 @@ export default function HomePage() {
               <div className="brand-card__image">
                 <Image
                   src={assetPath("/assets/fuso-truck.jpg")}
-                  alt="Mitsubishi Fuso commercial vehicle"
+                  alt="ORBIS Mitsubishi Fuso showroom frontage"
                   fill
                   sizes="(max-width: 900px) 100vw, 40vw"
                 />

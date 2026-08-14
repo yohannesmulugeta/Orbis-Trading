@@ -45,7 +45,7 @@ export default function AutomotivePage() {
         title="Automotive excellence since 1950."
         text="International automotive brands supported by local sales, service and technical experience."
         image="/assets/mercedes-truck.jpg"
-        imageAlt="Mercedes-Benz commercial vehicle"
+        imageAlt="ORBIS Mercedes-Benz and FUSO showroom frontage"
       />
 
       <section className="section automotive-brands-page">

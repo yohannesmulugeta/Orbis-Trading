@@ -133,7 +133,7 @@ export default function AboutPage() {
           <div className="facilities-section__image">
             <Image
               src={assetPath("/assets/orbis-showroom.jpg")}
-              alt="ORBIS vehicle showroom and inspection area"
+              alt="ORBIS Trading and Technical Center building in Addis Ababa"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"
             />

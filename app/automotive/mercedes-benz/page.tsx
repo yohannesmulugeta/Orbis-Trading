@@ -14,7 +14,7 @@ export default function MercedesBenzPage() {
       title="An automotive legacy built over generations."
       intro="The flagship ORBIS automotive story, supported by an integrated sales, service and spare-parts operation in Ethiopia."
       heroImage="/assets/mercedes-truck.jpg"
-      heroAlt="Mercedes-Benz commercial vehicle"
+      heroAlt="ORBIS Mercedes-Benz showroom in Addis Ababa"
       featureImage="/assets/mercedes-sprinter.jpg"
       featureAlt="Mercedes-Benz Sprinter vehicle"
       categories={["Passenger Vehicles", "Commercial Vehicles", "Sprinter"]}
