@@ -13,6 +13,7 @@ export const webImages = {
   renaultDuster: commons("2024_Renault_Duster_1.3_TCe_Turbo_Iconic.jpg"),
   renaultKangoo: commons("2022_Renault_Kangoo_1.6_SCe_Zen_(Argentina).jpg"),
   mitsubishiFuso: commons("2015_Mitsubishi_Fuso_Canter.jpg"),
+  mitsubishiFusoHeavy: commons("Mitsubishi-Fuso-Super-Great.jpg"),
 
   automotiveWorkshop: commons(
     "Mechanic_works_on_car_engine_performing_routine_maintenance_and_inspections_on_vehicle_parts.jpg",
