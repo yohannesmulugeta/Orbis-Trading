@@ -5,7 +5,7 @@ export const webImages = {
   renaultKangoo: "/assets/renault-kangoo.jpg",
   mitsubishiFuso: "/assets/fuso-truck.jpg",
   ethiopianCoffee:
-    "https://commons.wikimedia.org/wiki/Special:FilePath/Bunna4_-_Roasting_coffee_beans.jpg",
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Green_arabica_coffee_beans.jpg",
   ethiopianBus: "/assets/orbis-bus.jpg",
   automotiveWorkshop: "/assets/bus-workshop.jpg",
   orbisShowroom: "/assets/orbis-showroom.jpg",
