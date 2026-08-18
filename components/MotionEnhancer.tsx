@@ -3,41 +3,31 @@
 import { useEffect } from "react";
 
 const selectors = [
-  ".home-hero__content",
   ".heritage-intro__grid",
-  ".profile-proof__grid article",
   ".timeline__item",
   ".mercedes-feature__copy",
   ".mercedes-feature__visual",
   ".brand-card",
-  ".services-overview__list a",
-  ".statistics__intro",
-  ".statistics__items > div",
-  ".company-snapshot__cards article",
   ".bus-feature__media",
   ".bus-feature__copy",
   ".export-feature__content",
-  ".coffee-origins__visual",
-  ".coffee-origins__copy",
-  ".corporate-stories__grid a",
+  ".statistics__items > div",
   ".page-hero__content",
-  ".split-feature__copy",
   ".split-feature__media",
-  ".automotive-brands-page__list a",
-  ".automotive-ecosystem__grid article",
-  ".dealership-model__steps article",
-  ".automotive-application__grid > div",
-  ".bus-intro__grid > div",
+  ".service-intro__grid",
+  ".parts-feature__image",
+  ".parts-feature__copy",
+  ".bus-intro__grid",
   ".bus-product__image",
   ".bus-product__copy",
-  ".assembly-process__list article",
-  ".workshop-banner__content",
-  ".export-category",
-  ".export-portfolio__lists article",
-  ".export-process__grid article",
-  ".parts-planning__grid article",
-  ".product-list",
-  ".coffee-origin-cloud span",
+  ".export-intro__grid",
+  ".coffee-intro__grid",
+  ".mb-story__copy",
+  ".mb-story__media",
+  ".mb-support__grid article",
+  ".mb-applications__media",
+  ".mb-applications__copy",
+  ".mb-local__content",
   ".inquiry-cta__inner > div",
 ].join(",");
 
@@ -49,7 +39,7 @@ export function MotionEnhancer() {
     const elements = Array.from(document.querySelectorAll<HTMLElement>(selectors));
     elements.forEach((element, index) => {
       element.classList.add("motion-ready");
-      element.style.setProperty("--motion-delay", `${Math.min(index % 5, 4) * 70}ms`);
+      element.style.setProperty("--motion-delay", `${Math.min(index % 4, 3) * 55}ms`);
     });
 
     const observer = new IntersectionObserver(
@@ -61,7 +51,7 @@ export function MotionEnhancer() {
           }
         });
       },
-      { threshold: 0.14, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
     );
 
     elements.forEach((element) => observer.observe(element));
