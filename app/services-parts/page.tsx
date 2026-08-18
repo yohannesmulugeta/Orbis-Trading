@@ -41,8 +41,8 @@ export default function ServicesPartsPage() {
         eyebrow="Services & Parts"
         title="Support that continues beyond the sale."
         text="Workshop capability, experienced technicians, organized spare-parts support and Bosch automotive components."
-        image={webImages.automotiveWorkshop}
-        imageAlt="Real automotive workshop interior"
+        image={webImages.serviceWorkshop}
+        imageAlt="Modern automotive workshop with a vehicle on a service lift"
       />
 
       <section className="section service-intro" id="service">
@@ -62,8 +62,8 @@ export default function ServicesPartsPage() {
       <section className="parts-feature" id="parts">
         <div className="parts-feature__image">
           <Image
-            src={assetPath("/assets/bosch-parts.jpg")}
-            alt="Automotive spare parts presented in the ORBIS company profile"
+            src={assetPath(webImages.partsWorkshop)}
+            alt="Automotive tools and parts in a professional workshop"
             fill
             sizes="(max-width: 900px) 100vw, 48vw"
           />
@@ -119,8 +119,8 @@ export default function ServicesPartsPage() {
           </div>
           <div className="bosch-section__image">
             <Image
-              src={assetPath("/assets/bosch-parts.jpg")}
-              alt="Bosch automotive components"
+              src={assetPath(webImages.partsDetail)}
+              alt="Automotive parts and workshop equipment"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"
             />
