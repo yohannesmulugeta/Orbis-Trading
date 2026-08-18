@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLink } from "@/components/ArrowLink";
+import { CountUpValue } from "@/components/CountUpValue";
 import { InquiryCta } from "@/components/InquiryCta";
 import { SectionHeading } from "@/components/SectionHeading";
 import { services, statistics, timeline } from "@/lib/content";
@@ -267,7 +268,7 @@ export default function HomePage() {
           <div className="statistics__items">
             {statistics.map((stat) => (
               <div key={stat.label}>
-                <strong>{stat.value}</strong>
+                <strong><CountUpValue value={stat.value} /></strong>
                 <span>{stat.label}</span>
               </div>
             ))}
