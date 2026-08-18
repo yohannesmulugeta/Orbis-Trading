@@ -28,7 +28,7 @@ export default function BusAssemblyPage() {
         title="Built for Ethiopian roads."
         text="Mercedes-Benz chassis and engines combined with local engineering, body construction, testing and support."
         image={webImages.ethiopianBus}
-        imageAlt="Passenger bus in Ethiopia"
+        imageAlt="Mercedes-Benz passenger coach"
       />
 
       <section className="section bus-intro">
@@ -57,7 +57,7 @@ export default function BusAssemblyPage() {
           <div className="bus-product__image">
             <Image
               src={assetPath(webImages.ethiopianBus)}
-              alt="Passenger bus in Ethiopia"
+              alt="Mercedes-Benz passenger coach"
               fill
               sizes="(max-width: 900px) 100vw, 55vw"
             />
@@ -95,14 +95,14 @@ export default function BusAssemblyPage() {
 
       <section className="workshop-banner">
         <Image
-          src={assetPath(webImages.automotiveWorkshop)}
-          alt="Real automotive workshop interior"
+          src={assetPath(webImages.busAssembly)}
+          alt="Modern truck and bus assembly line"
           fill
           sizes="100vw"
         />
         <div className="workshop-banner__overlay" />
         <div className="container workshop-banner__content">
-          <p className="eyebrow eyebrow--light">Inside ORBIS</p>
+          <p className="eyebrow eyebrow--light">Inside the assembly process</p>
           <h2>Engineering. Craftsmanship. Continuous improvement.</h2>
         </div>
       </section>
