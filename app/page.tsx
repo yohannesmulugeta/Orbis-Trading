@@ -29,24 +29,35 @@ export default function HomePage() {
         <div className="home-hero__overlay" />
         <div className="home-hero__year" aria-hidden="true">75</div>
         <div className="container home-hero__content">
-          <div className="home-hero__kicker">
-            <span>Since 1950</span>
-            <span>Addis Ababa, Ethiopia</span>
+          <div className="home-hero__primary">
+            <div className="home-hero__kicker">
+              <span>Since 1950</span>
+              <span>Addis Ababa, Ethiopia</span>
+            </div>
+            <h1>
+              <span>Serving Ethiopia Since 1950</span>
+              Automotive, Service & Trade
+            </h1>
+            <p>
+              ORBIS brings together vehicle sales, technical service, spare parts, local bus-body
+              assembly and agricultural export activity from Addis Ababa.
+            </p>
+            <div className="home-hero__actions">
+              <Link className="button button--gold" href="/automotive/">
+                Explore automotive <span aria-hidden="true">↗</span>
+              </Link>
+              <ArrowLink href="/about/" tone="light">Discover our story</ArrowLink>
+            </div>
           </div>
-          <h1>
-            <span>Serving Ethiopia Since 1950</span>
-            Automotive, Service & Trade
-          </h1>
-          <p>
-            ORBIS brings together vehicle sales, technical service, spare parts, local bus-body
-            assembly and agricultural export activity from Addis Ababa.
-          </p>
-          <div className="home-hero__actions">
-            <Link className="button button--gold" href="/automotive/">
-              Explore automotive <span aria-hidden="true">↗</span>
+
+          <aside className="home-hero__spotlight" aria-label="Flagship automotive capability">
+            <span>Flagship automotive</span>
+            <strong>Mercedes-Benz</strong>
+            <p>Sales · Service · Spare Parts</p>
+            <Link href="/automotive/mercedes-benz/">
+              Explore the Mercedes-Benz story <span aria-hidden="true">↗</span>
             </Link>
-            <ArrowLink href="/about/" tone="light">Discover our story</ArrowLink>
-          </div>
+          </aside>
         </div>
         <div className="home-hero__rail">
           <span>75+ years</span>
@@ -102,7 +113,7 @@ export default function HomePage() {
               sales, service and spare-parts support in Ethiopia.
             </p>
             <div className="mercedes-feature__pillars">
-              {[['01', 'Sales'], ['02', 'Service'], ['03', 'Spare Parts']].map(([number, label]) => (
+              {[["01", "Sales"], ["02", "Service"], ["03", "Spare Parts"]].map(([number, label]) => (
                 <div key={label}>
                   <span>{number}</span>
                   <strong>{label}</strong>
