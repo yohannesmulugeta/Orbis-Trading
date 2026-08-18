@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { ProductList } from "@/components/ProductList";
 import { SectionHeading } from "@/components/SectionHeading";
 import { pulses } from "@/lib/content";
+import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
@@ -20,8 +21,8 @@ export default function PulsesPage() {
         eyebrow="Pulses"
         title="A diverse Ethiopian pulse portfolio."
         text="Beans, soybean, mung beans, lentils, chickpeas and mustard seed for export enquiry."
-        image="/assets/pulses-oilseeds.jpg"
-        imageAlt="A diverse selection of pulses"
+        image={webImages.pulses}
+        imageAlt="Close-up of chickpeas representing the pulse portfolio"
         parentLabel="Agricultural Export"
         parentHref="/export/"
       />
@@ -36,7 +37,7 @@ export default function PulsesPage() {
         </div>
       </section>
       <section className="commodity-banner">
-        <Image src={assetPath("/assets/pulses-oilseeds.jpg")} alt="Ethiopian pulses" fill sizes="100vw" />
+        <Image src={assetPath(webImages.pulses)} alt="Chickpeas representing Ethiopian pulse exports" fill sizes="100vw" />
         <div className="commodity-banner__overlay" />
         <div className="container commodity-banner__content">
           <p className="eyebrow eyebrow--light">Verified for every order</p>
