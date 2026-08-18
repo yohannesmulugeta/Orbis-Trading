@@ -1,0 +1,484 @@
+/* UI/UX Pro Max polish pass
+   Client-preview focused: restraint, hierarchy, spacing, touch comfort and mobile readability. */
+
+:root {
+  --surface-dark: #08131f;
+  --surface-deep: #0d1c2b;
+  --surface-warm: #f3f1eb;
+  --accent: #b27842;
+  --accent-strong: #8b5a32;
+  --text-muted-premium: #5f6770;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 80px;
+  --space-8: 96px;
+  --header-height: 80px;
+}
+
+html {
+  scroll-padding-top: calc(var(--header-height) + 24px);
+}
+
+body {
+  overflow-x: clip;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+h1,
+h2 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1 {
+  font-size: clamp(3rem, 5.4vw, 5.8rem);
+}
+
+h2 {
+  font-size: clamp(2.05rem, 3.7vw, 4.1rem);
+}
+
+.section {
+  padding: clamp(var(--space-7), 7vw, 112px) 0;
+}
+
+.section-heading {
+  margin-bottom: clamp(var(--space-5), 5vw, 72px);
+}
+
+.section-heading__text,
+.about-intro__body p,
+.facilities-section__copy > p:not(.eyebrow),
+.mb-story__copy > p:not(.eyebrow),
+.mb-applications__copy > p:not(.eyebrow) {
+  max-width: 68ch;
+}
+
+.eyebrow {
+  gap: 10px;
+  margin-bottom: var(--space-3);
+  letter-spacing: 0.13em;
+}
+
+.eyebrow::before {
+  width: 24px;
+  height: 1px;
+  opacity: 0.76;
+}
+
+.button,
+.arrow-link,
+.header-cta,
+.menu-button,
+.mobile-menu a {
+  touch-action: manipulation;
+}
+
+.button {
+  min-height: 48px;
+  gap: 16px;
+  padding-inline: 20px;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.arrow-link {
+  min-height: 44px;
+  align-items: center;
+}
+
+/* Header: quieter, slimmer and more premium. */
+.site-header {
+  height: var(--header-height);
+}
+
+.site-header--scrolled {
+  height: 68px;
+}
+
+.site-header__logo {
+  width: 220px;
+  height: 52px;
+  padding: 7px 10px;
+  border-radius: 6px;
+}
+
+.desktop-nav {
+  gap: clamp(14px, 1.3vw, 24px);
+}
+
+.desktop-nav__item > a {
+  height: var(--header-height);
+  font-size: 0.69rem;
+  letter-spacing: 0.045em;
+}
+
+.site-header--scrolled .desktop-nav__item > a {
+  height: 68px;
+}
+
+.header-cta {
+  gap: 14px;
+  margin-left: clamp(16px, 1.5vw, 26px);
+  padding-inline: 20px;
+  font-size: 0.69rem;
+}
+
+.desktop-nav__menu {
+  width: 248px;
+  padding: 16px;
+}
+
+.desktop-nav__menu a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* Hero scale: confident rather than oversized. */
+.home-hero h1 {
+  max-width: 920px;
+  font-size: clamp(3.35rem, 5.6vw, 5.7rem);
+}
+
+.home-hero__content > p {
+  max-width: 66ch;
+}
+
+.home-hero__year {
+  color: rgba(255, 255, 255, 0.025);
+}
+
+.page-hero h1 {
+  max-width: 900px;
+  font-size: clamp(2.8rem, 4.8vw, 5.1rem);
+}
+
+.page-hero__content > p:last-child {
+  max-width: 66ch;
+}
+
+.mb-hero h1 {
+  max-width: 860px;
+  font-size: clamp(3.2rem, 5.5vw, 5.6rem);
+}
+
+.about-history__content > h2,
+.mission-vision h2 {
+  font-size: clamp(2.35rem, 4vw, 4.3rem);
+}
+
+/* Reduce decorative repetition without removing useful process numbering. */
+.timeline__index,
+.services-overview__list > a > span:first-child,
+.process-line span,
+.product-list__index {
+  opacity: 0.58;
+}
+
+.services-overview__list > a {
+  min-height: 104px;
+  padding-block: var(--space-3);
+}
+
+.services-overview__list > a:hover {
+  padding-left: 8px;
+}
+
+.brand-card,
+.product-list,
+.values-grid div {
+  box-shadow: none;
+}
+
+/* Motion should support hierarchy, not decorate every block. */
+.motion-ready {
+  transform: translate3d(0, 10px, 0);
+  transition-duration: 420ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.motion-ready.motion-in {
+  will-change: auto;
+}
+
+/* Interaction states stay stable and readable. */
+.brand-card__image img,
+.mercedes-feature__visual img,
+.mb-story__media img,
+.mb-applications__media img {
+  transition-duration: 420ms;
+}
+
+:focus-visible {
+  outline-width: 2px;
+  outline-offset: 4px;
+}
+
+.form-field input,
+.form-field select {
+  min-height: 56px;
+}
+
+.form-field textarea {
+  min-height: 144px;
+}
+
+@media (max-width: 1220px) {
+  .site-header__logo {
+    width: 198px;
+    height: 48px;
+  }
+
+  .desktop-nav {
+    gap: 12px;
+  }
+
+  .desktop-nav__item > a,
+  .header-cta {
+    font-size: 0.65rem;
+  }
+
+  .header-cta {
+    margin-left: 14px;
+    padding-inline: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  .site-header,
+  .site-header--scrolled {
+    height: var(--header-height);
+  }
+
+  .site-header__logo {
+    width: 190px;
+    height: 46px;
+  }
+
+  .menu-button {
+    width: 48px;
+    height: 48px;
+  }
+
+  .mobile-menu {
+    visibility: hidden;
+    padding-top: calc(var(--header-height) + 32px);
+  }
+
+  .mobile-menu--open {
+    visibility: visible;
+  }
+
+  .mobile-menu__group {
+    padding: 12px 0;
+  }
+
+  .mobile-menu__group > a {
+    min-height: 56px;
+    font-size: clamp(1.55rem, 4.6vw, 2.6rem);
+  }
+
+  .mobile-menu__children {
+    gap: 8px 12px;
+    margin-top: 8px;
+  }
+
+  .mobile-menu__children a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 0.82rem;
+  }
+
+  .mobile-menu__cta {
+    min-height: 56px;
+  }
+
+  .home-hero__year {
+    display: none;
+  }
+
+  .mb-story__media,
+  .mb-applications__media {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --container: calc(100vw - 40px);
+    --header-height: 68px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: var(--space-6) 0;
+  }
+
+  .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .site-header__logo {
+    width: 174px;
+    height: 44px;
+  }
+
+  .home-hero {
+    min-height: 680px;
+  }
+
+  .home-hero__content {
+    padding-bottom: 56px;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(2.75rem, 12.5vw, 4.05rem);
+  }
+
+  .home-hero__content > p,
+  .page-hero__content > p:last-child,
+  .mb-hero__content > p:not(.mb-hero__eyebrow) {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .home-hero__actions,
+  .mb-hero__actions {
+    gap: 16px;
+  }
+
+  .page-hero {
+    min-height: 520px;
+  }
+
+  .page-hero__content {
+    padding-top: calc(var(--header-height) + 72px);
+    padding-bottom: 52px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.45rem, 11vw, 3.75rem);
+  }
+
+  .mb-hero {
+    min-height: 690px;
+  }
+
+  .mb-hero h1 {
+    font-size: clamp(2.65rem, 11.5vw, 4rem);
+  }
+
+  .mb-hero__content {
+    padding-top: calc(var(--header-height) + 72px);
+    padding-bottom: 56px;
+  }
+
+  .mb-story__media,
+  .mb-applications__media,
+  .about-history__image,
+  .facilities-section__image,
+  .split-feature__media,
+  .automotive-application__image,
+  .bosch-section__image,
+  .bus-product__image {
+    min-height: 360px;
+  }
+
+  .mb-local {
+    min-height: 500px;
+  }
+
+  .mb-local__content {
+    padding: var(--space-6) 0;
+  }
+
+  .inquiry-cta__inner {
+    min-height: 0;
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
+  }
+
+  .button,
+  .mobile-menu__cta {
+    min-height: 52px;
+  }
+
+  .mobile-menu {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .mobile-menu__children {
+    margin-left: 42px;
+  }
+}
+
+@media (max-width: 390px) {
+  :root {
+    --container: calc(100vw - 32px);
+  }
+
+  .site-header__logo {
+    width: 162px;
+  }
+
+  .home-hero h1,
+  .mb-hero h1 {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.3rem, 11vw, 3.3rem);
+  }
+
+  .mobile-menu__group > a {
+    grid-template-columns: 34px 1fr;
+  }
+
+  .mobile-menu__children {
+    margin-left: 34px;
+  }
+}
+
+@media (hover: none) {
+  .button:hover,
+  .brand-card:hover img,
+  .mercedes-feature__visual:hover img,
+  .arrow-link:hover .arrow-link__icon {
+    transform: none;
+  }
+
+  .services-overview__list > a:hover {
+    padding-left: 0;
+    background: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-ready,
+  .motion-ready.motion-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
