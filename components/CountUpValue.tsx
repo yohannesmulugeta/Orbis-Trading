@@ -12,13 +12,14 @@ type ParsedValue = {
   prefix: string;
   suffix: string;
   decimals: number;
+  useGrouping: boolean;
 };
 
 function parseDisplayValue(value: string): ParsedValue {
   const match = value.match(/[\d,]+(?:\.\d+)?/);
 
   if (!match || match.index === undefined) {
-    return { end: 0, prefix: value, suffix: "", decimals: 0 };
+    return { end: 0, prefix: value, suffix: "", decimals: 0, useGrouping: false };
   }
 
   const numericText = match[0];
@@ -29,8 +30,21 @@ function parseDisplayValue(value: string): ParsedValue {
     prefix: value.slice(0, match.index),
     suffix: value.slice(match.index + numericText.length),
     decimals: decimalPart?.length ?? 0,
+    useGrouping: numericText.includes(","),
   };
 }
+
+const numberStyle = {
+  display: "inline-block",
+  font: "inherit",
+  fontFamily: "inherit",
+  fontSize: "inherit",
+  fontWeight: "inherit",
+  lineHeight: "inherit",
+  color: "inherit",
+  letterSpacing: "inherit",
+  textTransform: "none" as const,
+};
 
 export function CountUpValue({ value, duration = 1800 }: CountUpValueProps) {
   const parsed = useMemo(() => parseDisplayValue(value), [value]);
@@ -89,11 +103,12 @@ export function CountUpValue({ value, duration = 1800 }: CountUpValueProps) {
   const formattedNumber = displayValue.toLocaleString("en-US", {
     minimumFractionDigits: parsed.decimals,
     maximumFractionDigits: parsed.decimals,
+    useGrouping: parsed.useGrouping,
   });
 
   return (
-    <span ref={elementRef} aria-label={value}>
-      <span aria-hidden="true">
+    <span ref={elementRef} aria-label={value} style={numberStyle}>
+      <span aria-hidden="true" style={numberStyle}>
         {parsed.prefix}
         {formattedNumber}
         {parsed.suffix}
