@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./refinements.css";
+import "./ux-polish.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MotionEnhancer } from "@/components/MotionEnhancer";

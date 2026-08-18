@@ -2,13 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { navItems } from "@/lib/content";
 import { assetPath } from "@/lib/paths";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -19,8 +21,51 @@ export function Header() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+
+    if (!open) {
+      return () => {
+        document.body.style.overflow = "";
+      };
+    }
+
+    const menu = mobileMenuRef.current;
+    const firstLink = menu?.querySelector<HTMLElement>("a[href]");
+    firstLink?.focus();
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        menuButtonRef.current?.focus();
+        return;
+      }
+
+      if (event.key !== "Tab" || !menu) return;
+
+      const links = Array.from(menu.querySelectorAll<HTMLElement>("a[href]"));
+      const focusable = [menuButtonRef.current, ...links].filter(
+        (item): item is HTMLElement => Boolean(item),
+      );
+
+      if (focusable.length === 0) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+
+      if (event.shiftKey && active === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+
     return () => {
       document.body.style.overflow = "";
+      document.removeEventListener("keydown", onKeyDown);
     };
   }, [open]);
 
@@ -59,6 +104,7 @@ export function Header() {
         </Link>
 
         <button
+          ref={menuButtonRef}
           className={`menu-button ${open ? "menu-button--open" : ""}`}
           type="button"
           aria-expanded={open}
@@ -71,7 +117,12 @@ export function Header() {
         </button>
       </div>
 
-      <div id="mobile-menu" className={`mobile-menu ${open ? "mobile-menu--open" : ""}`}>
+      <div
+        ref={mobileMenuRef}
+        id="mobile-menu"
+        className={`mobile-menu ${open ? "mobile-menu--open" : ""}`}
+        aria-hidden={!open}
+      >
         <nav aria-label="Mobile navigation">
           {navItems.map((item, index) => (
             <div className="mobile-menu__group" key={item.label}>
