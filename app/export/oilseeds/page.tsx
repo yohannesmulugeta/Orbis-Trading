@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { ProductList } from "@/components/ProductList";
 import { SectionHeading } from "@/components/SectionHeading";
 import { oilseeds } from "@/lib/content";
+import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
@@ -20,8 +21,8 @@ export default function OilseedsPage() {
         eyebrow="Oilseeds"
         title="Ethiopian oilseeds for international markets."
         text="A documented portfolio including Ethiopian sesame, Niger seed, linseed and peanuts."
-        image="/assets/pulses-oilseeds.jpg"
-        imageAlt="A selection of oilseeds and pulses"
+        image={webImages.oilseeds}
+        imageAlt="Close-up of white sesame seeds"
         parentLabel="Agricultural Export"
         parentHref="/export/"
       />
@@ -36,7 +37,7 @@ export default function OilseedsPage() {
         </div>
       </section>
       <section className="commodity-banner">
-        <Image src={assetPath("/assets/pulses-oilseeds.jpg")} alt="Ethiopian oilseed products" fill sizes="100vw" />
+        <Image src={assetPath(webImages.oilseeds)} alt="White sesame seeds representing the oilseed portfolio" fill sizes="100vw" />
         <div className="commodity-banner__overlay" />
         <div className="container commodity-banner__content">
           <p className="eyebrow eyebrow--light">Commercial details</p>

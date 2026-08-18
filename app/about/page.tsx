@@ -4,6 +4,7 @@ import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { companyHighlights, coreValues, facilityCapabilities, statistics, timeline } from "@/lib/content";
+import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
@@ -19,8 +20,8 @@ export default function AboutPage() {
         eyebrow="About ORBIS"
         title="Over 75 years. One forward-looking journey."
         text="From Menelik Square in 1950 to a diversified automotive, engineering and export business."
-        image="/assets/orbis-building.jpg"
-        imageAlt="ORBIS headquarters in Addis Ababa"
+        image={webImages.companyBuilding}
+        imageAlt="Modern commercial architecture in Addis Ababa"
       />
 
       <section className="section" id="who-we-are">
@@ -67,8 +68,8 @@ export default function AboutPage() {
       <section className="about-history" id="history">
         <div className="about-history__image">
           <Image
-            src={assetPath("/assets/orbis-legacy.jpg")}
-            alt="Legacy ORBIS photograph from the existing company website"
+            src={assetPath(webImages.heritageMercedes)}
+            alt="1950 Mercedes-Benz 170 S illustrating the automotive era when ORBIS began"
             fill
             sizes="(max-width: 900px) 100vw, 48vw"
           />
@@ -156,8 +157,8 @@ export default function AboutPage() {
           </div>
           <div className="facilities-section__image">
             <Image
-              src={assetPath("/assets/orbis-showroom.jpg")}
-              alt="ORBIS Trading and Technical Center building in Addis Ababa"
+              src={assetPath(webImages.companyShowroom)}
+              alt="Contemporary automotive dealership showroom used as a demo visual"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"
             />

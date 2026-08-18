@@ -15,9 +15,9 @@ export default function RenaultPage() {
       title="Practical mobility for everyday and business needs."
       intro="Renault is part of ORBIS's long automotive story, with passenger and commercial vehicle categories supported locally."
       heroImage={webImages.renaultDuster}
-      heroAlt="Renault Duster SUV"
-      featureImage={webImages.renaultDuster}
-      featureAlt="Renault Duster SUV"
+      heroAlt="Modern Renault Duster SUV"
+      featureImage={webImages.renaultKangoo}
+      featureAlt="Renault Kangoo compact commercial van"
       categories={["Passenger Mobility", "Commercial Mobility"]}
       capabilityTitle="Renault mobility, connected to ORBIS support."
       capabilityText="ORBIS supports Renault customers through automotive sales, maintenance and parts operations. Contact the team to confirm the current vehicle range and suitability for your application."

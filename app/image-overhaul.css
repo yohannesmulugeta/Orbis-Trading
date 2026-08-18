@@ -1,0 +1,152 @@
+/* Demo image overhaul
+   Keep photographs natural, correctly oriented and consistently framed. */
+
+img {
+  image-orientation: from-image;
+}
+
+.home-hero__background,
+.page-hero__image,
+.mercedes-feature__visual img,
+.brand-card__image img,
+.bus-feature__media img,
+.export-feature__background,
+.mb-hero__image,
+.mb-story__media img,
+.mb-applications__media img,
+.mb-local > img,
+.parts-feature__image img,
+.bosch-section__image img,
+.workshop-banner > img,
+.export-category > img,
+.commodity-banner > img,
+.about-history__image img,
+.facilities-section__image img,
+.automotive-application__image img,
+.automotive-brands-page__image img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Strong editorial crops without mirroring or extreme zoom. */
+.home-hero__background {
+  object-position: center 48%;
+  filter: saturate(0.9) contrast(1.03);
+}
+
+.page-hero__image {
+  object-position: center 52%;
+  filter: saturate(0.94) contrast(1.03);
+}
+
+.mb-hero__image {
+  object-position: center 54%;
+  filter: saturate(0.94) contrast(1.04);
+}
+
+.mercedes-feature__visual img,
+.mb-story__media img,
+.mb-applications__media img,
+.brand-card__image img,
+.automotive-brands-page__image img {
+  filter: saturate(0.98) contrast(1.02);
+}
+
+.mb-story__media img,
+.mb-applications__media img {
+  object-position: center 56%;
+}
+
+.brand-card__image img,
+.automotive-brands-page__image img {
+  object-position: center 55%;
+}
+
+.parts-feature__image img,
+.bosch-section__image img,
+.workshop-banner > img,
+.mb-local > img {
+  object-position: center 52%;
+  filter: saturate(0.92) contrast(1.04);
+}
+
+.bus-feature__media img,
+.bus-product__image img {
+  object-fit: cover;
+  object-position: center 55%;
+  filter: saturate(0.96) contrast(1.02);
+}
+
+.export-feature__background,
+.export-category > img,
+.commodity-banner > img {
+  object-position: center 50%;
+  filter: saturate(0.96) contrast(1.02);
+}
+
+.about-history__image img {
+  object-position: center 52%;
+  filter: grayscale(0.18) saturate(0.85) contrast(1.04);
+}
+
+.facilities-section__image img {
+  object-position: center 52%;
+  filter: saturate(0.92) contrast(1.03);
+}
+
+/* Keep vehicle thumbnails fully readable instead of awkwardly cutting off the body. */
+.automotive-brands-page__image {
+  overflow: hidden;
+  background: #ece9e3;
+}
+
+.automotive-brands-page__image img {
+  object-fit: cover;
+}
+
+/* Remote image fallback surfaces avoid a white flash while high-resolution media loads. */
+.home-hero,
+.page-hero,
+.mercedes-feature__visual,
+.brand-card__image,
+.bus-feature__media,
+.export-feature,
+.mb-hero,
+.mb-story__media,
+.mb-applications__media,
+.mb-local,
+.parts-feature__image,
+.bosch-section__image,
+.workshop-banner,
+.export-category,
+.commodity-banner,
+.about-history__image,
+.facilities-section__image {
+  background-color: #101b27;
+}
+
+@media (max-width: 720px) {
+  .home-hero__background {
+    object-position: 56% center;
+  }
+
+  .page-hero__image,
+  .mb-hero__image {
+    object-position: 58% center;
+  }
+
+  .brand-card__image img,
+  .bus-feature__media img,
+  .export-category > img {
+    object-position: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero__background,
+  .mb-hero__image,
+  .brand-card__image img,
+  .export-category > img {
+    transition: none !important;
+  }
+}

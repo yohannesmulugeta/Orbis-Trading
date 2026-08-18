@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { InquiryCta } from "@/components/InquiryCta";
+import { webImages } from "@/lib/media";
 import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
@@ -16,8 +17,8 @@ export default function MercedesBenzPage() {
       <section className="mb-hero">
         <Image
           className="mb-hero__image"
-          src={assetPath("/assets/mercedes-sprinter.jpg")}
-          alt="Mercedes-Benz Sprinter presented in the ORBIS automotive portfolio"
+          src={assetPath(webImages.mercedesSprinter)}
+          alt="Modern Mercedes-Benz Sprinter"
           fill
           priority
           sizes="100vw"
@@ -61,8 +62,8 @@ export default function MercedesBenzPage() {
           </div>
           <div className="mb-story__media">
             <Image
-              src={assetPath("/assets/mercedes-truck.jpg")}
-              alt="Mercedes-Benz commercial vehicle"
+              src={assetPath(webImages.mercedesTruck)}
+              alt="Mercedes-Benz Actros commercial truck"
               fill
               sizes="(max-width: 900px) 100vw, 52vw"
             />
@@ -113,8 +114,8 @@ export default function MercedesBenzPage() {
         <div className="container mb-applications__grid">
           <div className="mb-applications__media">
             <Image
-              src={assetPath("/assets/mercedes-sprinter.jpg")}
-              alt="Mercedes-Benz Sprinter"
+              src={assetPath(webImages.mercedesPassenger)}
+              alt="Modern Mercedes-Benz E-Class passenger vehicle"
               fill
               sizes="(max-width: 900px) 100vw, 48vw"
             />
@@ -140,8 +141,8 @@ export default function MercedesBenzPage() {
 
       <section className="mb-local">
         <Image
-          src={assetPath("/assets/bus-workshop.jpg")}
-          alt="ORBIS workshop capability"
+          src={assetPath(webImages.serviceWorkshop)}
+          alt="Automotive service workshop with a vehicle on a lift"
           fill
           sizes="100vw"
         />

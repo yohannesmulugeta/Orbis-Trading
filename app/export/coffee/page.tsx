@@ -21,8 +21,8 @@ export default function CoffeePage() {
         eyebrow="Ethiopian Coffee"
         title="Ethiopian coffee. Exported with experience."
         text="Specialty, washed and natural green coffees from origins documented in the ORBIS portfolio."
-        image={webImages.ethiopianCoffee}
-        imageAlt="Ethiopian coffee beans being roasted"
+        image={webImages.greenCoffee}
+        imageAlt="High-resolution unroasted green coffee beans"
         parentLabel="Agricultural Export"
         parentHref="/export/"
       />

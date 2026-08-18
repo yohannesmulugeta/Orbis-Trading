@@ -41,7 +41,7 @@ export default function ExportPage() {
         title="Agricultural export from Ethiopia."
         text="Coffee, oilseeds and pulses are presented for international product enquiries."
         image={webImages.ethiopianCoffee}
-        imageAlt="Ethiopian green coffee beans"
+        imageAlt="Coffee quality inspection in Ethiopia"
       />
 
       <section className="section export-intro">
@@ -74,8 +74,8 @@ export default function ExportPage() {
         <div className="container export-categories__grid">
           <Link className="export-category export-category--coffee" href="/export/coffee/">
             <Image
-              src={assetPath(webImages.ethiopianCoffee)}
-              alt="Ethiopian green coffee beans"
+              src={assetPath(webImages.greenCoffee)}
+              alt="Unroasted green coffee beans"
               fill
               sizes="(max-width: 900px) 100vw, 40vw"
             />
@@ -88,7 +88,7 @@ export default function ExportPage() {
             </div>
           </Link>
           <Link className="export-category" href="/export/oilseeds/">
-            <Image src={assetPath("/assets/pulses-oilseeds.jpg")} alt="Oilseeds and pulses" fill sizes="(max-width: 900px) 100vw, 40vw" />
+            <Image src={assetPath(webImages.oilseeds)} alt="White sesame seeds" fill sizes="(max-width: 900px) 100vw, 40vw" />
             <div className="export-category__overlay" />
             <div className="export-category__copy">
               <span>02</span>
@@ -98,7 +98,7 @@ export default function ExportPage() {
             </div>
           </Link>
           <Link className="export-category" href="/export/pulses/">
-            <Image src={assetPath("/assets/pulses-oilseeds.jpg")} alt="Ethiopian pulses" fill sizes="(max-width: 900px) 100vw, 40vw" />
+            <Image src={assetPath(webImages.pulses)} alt="Chickpeas representing the pulse portfolio" fill sizes="(max-width: 900px) 100vw, 40vw" />
             <div className="export-category__overlay" />
             <div className="export-category__copy">
               <span>03</span>
