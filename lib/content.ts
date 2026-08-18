@@ -36,7 +36,6 @@ export const navItems: NavItem[] = [
       { label: "Pulses", href: "/export/pulses/" },
     ],
   },
-  { label: "News", href: "/news/" },
 ];
 
 export const timeline = [
