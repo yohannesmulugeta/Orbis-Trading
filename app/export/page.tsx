@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { EditorialAccordion } from "@/components/EditorialAccordion";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -15,6 +16,24 @@ export const metadata: Metadata = {
 };
 
 export default function ExportPage() {
+  const portfolioItems = [
+    {
+      title: "Coffee categories",
+      text: coffeeGroups.map((group) => group.name).join(", "),
+      label: "01",
+    },
+    {
+      title: "Oilseeds",
+      text: oilseeds.join(", "),
+      label: "02",
+    },
+    {
+      title: "Pulses",
+      text: pulses.join(", "),
+      label: "03",
+    },
+  ];
+
   return (
     <>
       <PageHero
@@ -22,7 +41,7 @@ export default function ExportPage() {
         title="Agricultural export from Ethiopia."
         text="Coffee, oilseeds and pulses are presented for international product enquiries."
         image={webImages.ethiopianCoffee}
-        imageAlt="Ethiopian coffee beans being roasted"
+        imageAlt="Ethiopian green coffee beans"
       />
 
       <section className="section export-intro">
@@ -56,7 +75,7 @@ export default function ExportPage() {
           <Link className="export-category export-category--coffee" href="/export/coffee/">
             <Image
               src={assetPath(webImages.ethiopianCoffee)}
-              alt="Ethiopian coffee beans being roasted"
+              alt="Ethiopian green coffee beans"
               fill
               sizes="(max-width: 900px) 100vw, 40vw"
             />
@@ -98,27 +117,14 @@ export default function ExportPage() {
             <h2>Clear product groups before the commercial discussion starts.</h2>
             <p>
               The supplied ORBIS profile lists Ethiopian green coffee categories, oilseeds
-              and pulses. The website now presents those groups clearly while leaving
-              grade, crop, packaging and availability for direct confirmation.
+              and pulses. The website presents those groups clearly while leaving grade, crop,
+              packaging and availability for direct confirmation.
             </p>
           </div>
-          <div className="export-portfolio__lists">
-            <article>
-              <span>01</span>
-              <h3>Coffee categories</h3>
-              <p>{coffeeGroups.map((group) => group.name).join(", ")}</p>
-            </article>
-            <article>
-              <span>02</span>
-              <h3>Oilseeds</h3>
-              <p>{oilseeds.join(", ")}</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>Pulses</h3>
-              <p>{pulses.join(", ")}</p>
-            </article>
-          </div>
+          <EditorialAccordion
+            items={portfolioItems}
+            ariaLabel="ORBIS documented agricultural export portfolio"
+          />
         </div>
       </section>
 
