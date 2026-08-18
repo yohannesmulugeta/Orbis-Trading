@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { navItems } from "@/lib/content";
 import { assetPath } from "@/lib/paths";
@@ -11,6 +12,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -69,6 +71,11 @@ export function Header() {
     };
   }, [open]);
 
+  const isSectionActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
   return (
     <header className={`site-header ${scrolled ? "site-header--scrolled" : ""}`}>
       <div className="site-header__inner">
@@ -83,20 +90,41 @@ export function Header() {
         </Link>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <div className="desktop-nav__item" key={item.label}>
-              <Link href={item.href}>{item.label}</Link>
-              {item.children ? (
-                <div className="desktop-nav__menu">
-                  {item.children.map((child) => (
-                    <Link href={child.href} key={child.label}>
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              ) : null}
-            </div>
-          ))}
+          {navItems.map((item) => {
+            const active = isSectionActive(item.href);
+            const exact = pathname === item.href;
+
+            return (
+              <div
+                className={`desktop-nav__item ${active ? "desktop-nav__item--active" : ""}`}
+                key={item.label}
+              >
+                <Link href={item.href} aria-current={exact ? "page" : undefined}>
+                  {item.label}
+                  {item.children ? <span className="desktop-nav__chevron" aria-hidden="true" /> : null}
+                </Link>
+                {item.children ? (
+                  <div className="desktop-nav__menu">
+                    <div className="desktop-nav__menu-label">{item.label}</div>
+                    {item.children.map((child) => {
+                      const childActive = pathname === child.href || pathname.startsWith(child.href);
+                      return (
+                        <Link
+                          className={childActive ? "desktop-nav__menu-link--active" : undefined}
+                          href={child.href}
+                          key={child.label}
+                          aria-current={pathname === child.href ? "page" : undefined}
+                        >
+                          <span>{child.label}</span>
+                          <span aria-hidden="true">↗</span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                ) : null}
+              </div>
+            );
+          })}
         </nav>
 
         <Link className="header-cta" href="/contact/">
@@ -124,23 +152,38 @@ export function Header() {
         aria-hidden={!open}
       >
         <nav aria-label="Mobile navigation">
-          {navItems.map((item, index) => (
-            <div className="mobile-menu__group" key={item.label}>
-              <Link href={item.href} onClick={() => setOpen(false)}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                {item.label}
-              </Link>
-              {item.children ? (
-                <div className="mobile-menu__children">
-                  {item.children.map((child) => (
-                    <Link href={child.href} key={child.label} onClick={() => setOpen(false)}>
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              ) : null}
-            </div>
-          ))}
+          {navItems.map((item, index) => {
+            const active = isSectionActive(item.href);
+            return (
+              <div
+                className={`mobile-menu__group ${active ? "mobile-menu__group--active" : ""}`}
+                key={item.label}
+              >
+                <Link
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={pathname === item.href ? "page" : undefined}
+                >
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  {item.label}
+                </Link>
+                {item.children ? (
+                  <div className="mobile-menu__children">
+                    {item.children.map((child) => (
+                      <Link
+                        href={child.href}
+                        key={child.label}
+                        onClick={() => setOpen(false)}
+                        aria-current={pathname === child.href ? "page" : undefined}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            );
+          })}
           <Link className="mobile-menu__cta" href="/contact/" onClick={() => setOpen(false)}>
             Start an enquiry <span aria-hidden="true">↗</span>
           </Link>
