@@ -20,8 +20,8 @@ export default function HomePage() {
       <section className="home-hero">
         <Image
           className="home-hero__background"
-          src={assetPath("/assets/orbis-building.jpg")}
-          alt="ORBIS headquarters in Addis Ababa"
+          src={assetPath(webImages.homeHero)}
+          alt="Modern commercial architecture in Addis Ababa"
           fill
           priority
           sizes="100vw"
@@ -125,7 +125,7 @@ export default function HomePage() {
           <div className="mercedes-feature__visual">
             <Image
               src={assetPath(webImages.mercedesSprinter)}
-              alt="Mercedes-Benz Sprinter presented in the ORBIS automotive portfolio"
+              alt="Modern Mercedes-Benz Sprinter"
               fill
               sizes="(max-width: 900px) 100vw, 55vw"
             />
@@ -150,7 +150,7 @@ export default function HomePage() {
               <div className="brand-card__image">
                 <Image
                   src={assetPath(webImages.mercedesTruck)}
-                  alt="Mercedes-Benz commercial vehicle"
+                  alt="Mercedes-Benz Actros commercial truck"
                   fill
                   sizes="(max-width: 900px) 100vw, 60vw"
                 />
@@ -164,7 +164,7 @@ export default function HomePage() {
             </Link>
             <Link className="brand-card" href="/automotive/renault/">
               <div className="brand-card__image">
-                <Image src={assetPath(webImages.renaultDuster)} alt="Renault vehicle" fill sizes="(max-width: 900px) 100vw, 40vw" />
+                <Image src={assetPath(webImages.renaultDuster)} alt="Modern Renault Duster" fill sizes="(max-width: 900px) 100vw, 40vw" />
               </div>
               <div className="brand-card__copy">
                 <span>Passenger & commercial</span>
@@ -175,7 +175,7 @@ export default function HomePage() {
             </Link>
             <Link className="brand-card brand-card--dark" href="/automotive/mitsubishi-fuso/">
               <div className="brand-card__image">
-                <Image src={assetPath(webImages.mitsubishiFuso)} alt="Mitsubishi Fuso commercial vehicle" fill sizes="(max-width: 900px) 100vw, 40vw" />
+                <Image src={assetPath(webImages.mitsubishiFuso)} alt="Mitsubishi Fuso Canter commercial truck" fill sizes="(max-width: 900px) 100vw, 40vw" />
               </div>
               <div className="brand-card__copy">
                 <span>Commercial mobility</span>
@@ -212,7 +212,7 @@ export default function HomePage() {
         <div className="bus-feature__media">
           <Image
             src={assetPath(webImages.ethiopianBus)}
-            alt="ORBIS passenger bus"
+            alt="Mercedes-Benz passenger coach"
             fill
             sizes="(max-width: 900px) 100vw, 50vw"
           />
@@ -241,7 +241,7 @@ export default function HomePage() {
         <Image
           className="export-feature__background"
           src={assetPath(webImages.ethiopianCoffee)}
-          alt="Ethiopian coffee"
+          alt="Coffee quality inspection in Ethiopia"
           fill
           sizes="100vw"
         />
