@@ -34,23 +34,11 @@ function parseDisplayValue(value: string): ParsedValue {
   };
 }
 
-const numberStyle = {
-  display: "inline-block",
-  font: "inherit",
-  fontFamily: "inherit",
-  fontSize: "inherit",
-  fontWeight: "inherit",
-  lineHeight: "inherit",
-  color: "inherit",
-  letterSpacing: "inherit",
-  textTransform: "none" as const,
-};
-
 export function CountUpValue({ value, duration = 1800 }: CountUpValueProps) {
   const parsed = useMemo(() => parseDisplayValue(value), [value]);
   const [displayValue, setDisplayValue] = useState(0);
   const [started, setStarted] = useState(false);
-  const elementRef = useRef<HTMLSpanElement>(null);
+  const elementRef = useRef<HTMLOutputElement>(null);
 
   useEffect(() => {
     const element = elementRef.current;
@@ -107,12 +95,10 @@ export function CountUpValue({ value, duration = 1800 }: CountUpValueProps) {
   });
 
   return (
-    <span ref={elementRef} aria-label={value} style={numberStyle}>
-      <span aria-hidden="true" style={numberStyle}>
-        {parsed.prefix}
-        {formattedNumber}
-        {parsed.suffix}
-      </span>
-    </span>
+    <output ref={elementRef} aria-label={value}>
+      {parsed.prefix}
+      {formattedNumber}
+      {parsed.suffix}
+    </output>
   );
 }
