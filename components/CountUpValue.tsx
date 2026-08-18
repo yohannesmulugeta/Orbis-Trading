@@ -1,5 +1,6 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 type CountUpValueProps = {
@@ -34,11 +35,46 @@ function parseDisplayValue(value: string): ParsedValue {
   };
 }
 
+const outputStyle: CSSProperties = {
+  display: "inline-grid",
+  position: "relative",
+  verticalAlign: "baseline",
+  font: "inherit",
+  fontFamily: "inherit",
+  fontSize: "inherit",
+  fontWeight: "inherit",
+  lineHeight: "inherit",
+  letterSpacing: "inherit",
+  color: "inherit",
+  fontVariantNumeric: "tabular-nums lining-nums",
+  fontFeatureSettings: '"tnum" 1, "lnum" 1',
+  whiteSpace: "nowrap",
+};
+
+const layerStyle: CSSProperties = {
+  gridArea: "1 / 1",
+  font: "inherit",
+  fontFamily: "inherit",
+  fontSize: "inherit",
+  fontWeight: "inherit",
+  lineHeight: "inherit",
+  letterSpacing: "inherit",
+  color: "inherit",
+  whiteSpace: "nowrap",
+};
+
 export function CountUpValue({ value, duration = 1800 }: CountUpValueProps) {
   const parsed = useMemo(() => parseDisplayValue(value), [value]);
   const [displayValue, setDisplayValue] = useState(0);
   const [started, setStarted] = useState(false);
   const elementRef = useRef<HTMLOutputElement>(null);
+
+  const formatNumber = (number: number) =>
+    number.toLocaleString("en-US", {
+      minimumFractionDigits: parsed.decimals,
+      maximumFractionDigits: parsed.decimals,
+      useGrouping: parsed.useGrouping,
+    });
 
   useEffect(() => {
     const element = elementRef.current;
@@ -67,15 +103,16 @@ export function CountUpValue({ value, duration = 1800 }: CountUpValueProps) {
 
     let animationFrame = 0;
     let startTime: number | null = null;
+    const precision = 10 ** parsed.decimals;
 
     const animate = (timestamp: number) => {
       if (startTime === null) startTime = timestamp;
 
       const progress = Math.min((timestamp - startTime) / duration, 1);
       const easedProgress = 1 - Math.pow(1 - progress, 3);
-      const nextValue = parsed.end * easedProgress;
+      const nextValue = Math.round(parsed.end * easedProgress * precision) / precision;
 
-      setDisplayValue(nextValue);
+      setDisplayValue((current) => (current === nextValue ? current : nextValue));
 
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate);
@@ -86,19 +123,21 @@ export function CountUpValue({ value, duration = 1800 }: CountUpValueProps) {
 
     animationFrame = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(animationFrame);
-  }, [duration, parsed.end, started]);
+  }, [duration, parsed.decimals, parsed.end, started]);
 
-  const formattedNumber = displayValue.toLocaleString("en-US", {
-    minimumFractionDigits: parsed.decimals,
-    maximumFractionDigits: parsed.decimals,
-    useGrouping: parsed.useGrouping,
-  });
+  const formattedNumber = formatNumber(displayValue);
+  const finalNumber = formatNumber(parsed.end);
+  const currentText = `${parsed.prefix}${formattedNumber}${parsed.suffix}`;
+  const finalText = `${parsed.prefix}${finalNumber}${parsed.suffix}`;
 
   return (
-    <output ref={elementRef} aria-label={value}>
-      {parsed.prefix}
-      {formattedNumber}
-      {parsed.suffix}
+    <output ref={elementRef} aria-label={value} style={outputStyle}>
+      <b aria-hidden="true" style={{ ...layerStyle, visibility: "hidden" }}>
+        {finalText}
+      </b>
+      <b aria-hidden="true" style={{ ...layerStyle, textAlign: "right" }}>
+        {currentText}
+      </b>
     </output>
   );
 }
