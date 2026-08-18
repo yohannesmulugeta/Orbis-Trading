@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/PageHero";
 import { contact } from "@/lib/content";
+import { webImages } from "@/lib/media";
 
 export const metadata: Metadata = {
   title: "Contact ORBIS",
@@ -16,8 +17,8 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="One company. The right team for every enquiry."
         text="Choose your area of interest and connect with ORBIS in Addis Ababa."
-        image="/assets/orbis-showroom.jpg"
-        imageAlt="ORBIS Trading and Technical Center building in Addis Ababa"
+        image={webImages.companyShowroom}
+        imageAlt="Contemporary automotive dealership showroom used as a demo visual"
       />
       <section className="section contact-page">
         <div className="container contact-page__grid">
