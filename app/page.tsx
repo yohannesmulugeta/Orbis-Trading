@@ -6,7 +6,7 @@ import { InquiryCta } from "@/components/InquiryCta";
 import { SectionHeading } from "@/components/SectionHeading";
 import { services, statistics, timeline } from "@/lib/content";
 import { webImages } from "@/lib/media";
-import { assetPath } from "@/lib/paths";
+import { assetPath, basePath } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "Serving Ethiopia Since 1950",
@@ -20,8 +20,8 @@ export default function HomePage() {
       <section className="home-hero">
         <Image
           className="home-hero__background"
-          src={assetPath(webImages.homeHero)}
-          alt="Modern commercial architecture in Addis Ababa"
+          src={`${basePath}/assets/orbis-building.jpg`}
+          alt="ORBIS headquarters in Addis Ababa"
           fill
           priority
           sizes="100vw"
