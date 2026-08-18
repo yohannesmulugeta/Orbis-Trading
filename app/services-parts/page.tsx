@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { EditorialAccordion } from "@/components/EditorialAccordion";
 import { InquiryCta } from "@/components/InquiryCta";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -13,6 +14,25 @@ export const metadata: Metadata = {
   description:
     "Explore ORBIS vehicle service, maintenance, body and paint, genuine spare parts and Bosch automotive components in Addis Ababa.",
 };
+
+const serviceCapabilities = [
+  {
+    title: "Pre-delivery inspection",
+    text: "Mechanical, body and finish checks before delivery of new vehicles.",
+  },
+  {
+    title: "Express maintenance",
+    text: "Standard maintenance support for eligible vehicle categories.",
+  },
+  {
+    title: "Diagnostics & technical support",
+    text: "Workshop assistance from trained engineers and technicians.",
+  },
+  {
+    title: "Body & paint",
+    text: "Major and minor body and paint repair capability.",
+  },
+];
 
 export default function ServicesPartsPage() {
   return (
@@ -32,20 +52,10 @@ export default function ServicesPartsPage() {
             title="Technical support built around the vehicle lifecycle."
             text="ORBIS's legacy service information and company profile document a connected workshop operation for represented automotive brands."
           />
-          <div className="service-capabilities">
-            {[
-              ["01", "Pre-delivery inspection", "Mechanical, body and finish checks before delivery of new vehicles."],
-              ["02", "Express maintenance", "Standard maintenance support for eligible vehicle categories."],
-              ["03", "Diagnostics & technical support", "Workshop assistance from trained engineers and technicians."],
-              ["04", "Body & paint", "Major and minor body and paint repair capability."],
-            ].map(([number, title, text]) => (
-              <article key={title}>
-                <span>{number}</span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
+          <EditorialAccordion
+            items={serviceCapabilities}
+            ariaLabel="ORBIS aftersales service capabilities"
+          />
         </div>
       </section>
 
