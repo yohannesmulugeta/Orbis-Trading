@@ -9,6 +9,7 @@ export const webImages = {
 
   mercedesSprinter: commons("Benz_VS30_Sprinter.png"),
   mercedesTruck: commons("Mercedes-Benz_Actros.jpg"),
+  mercedesPassenger: commons("2023_Mercedes_E_Class.jpg"),
   renaultDuster: commons("2024_Renault_Duster_1.3_TCe_Turbo_Iconic.jpg"),
   renaultKangoo: commons("2022_Renault_Kangoo_1.6_SCe_Zen_(Argentina).jpg"),
   mitsubishiFuso: commons("2015_Mitsubishi_Fuso_Canter.jpg"),
@@ -21,6 +22,9 @@ export const webImages = {
   ),
   partsWorkshop: commons(
     "Tools_and_parts_are_collected_in_a_metal_bowl_at_an_automotive_workshop.jpg",
+  ),
+  partsDetail: commons(
+    "Car_parts_and_tools_scattered_across_a_workshop_floor_during_a_maintenance_session.jpg",
   ),
 
   ethiopianBus: commons("Coach_bus_in_Lefkada,_Mercedes_Tourismo_V8.JPG"),
