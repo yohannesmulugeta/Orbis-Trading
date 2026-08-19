@@ -20,8 +20,8 @@ export default function AboutPage() {
         eyebrow="About ORBIS"
         title="Over 75 years. One forward-looking journey."
         text="From Menelik Square in 1950 to a diversified automotive, engineering and export business."
-        image={webImages.companyBuilding}
-        imageAlt="Modern commercial architecture in Addis Ababa"
+        image="/assets/orbis-history-restored.jpg"
+        imageAlt="Restored archival photograph from the ORBIS automotive history"
       />
 
       <section className="section" id="who-we-are">
@@ -68,8 +68,8 @@ export default function AboutPage() {
       <section className="about-history" id="history">
         <div className="about-history__image">
           <Image
-            src={assetPath("/assets/orbis-history-restored.jpg")}
-            alt="Restored archival photograph from the ORBIS automotive history"
+            src={assetPath(webImages.heritageMercedes)}
+            alt="1950 Mercedes-Benz 170 S illustrating the automotive era when ORBIS began"
             fill
             sizes="(max-width: 900px) 100vw, 48vw"
           />
