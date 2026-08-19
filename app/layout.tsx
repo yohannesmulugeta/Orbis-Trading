@@ -5,6 +5,7 @@ import "./ux-polish.css";
 import "./watermelon-interactions.css";
 import "./image-overhaul.css";
 import "./statistics-countup-fix.css";
+import "./premium-pages.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MotionEnhancer } from "@/components/MotionEnhancer";
