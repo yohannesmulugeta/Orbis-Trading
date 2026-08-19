@@ -35,6 +35,8 @@ export function Footer() {
             <Link href="/services-parts/">Services & Parts</Link>
             <Link href="/bus-assembly/">Bus Assembly</Link>
             <Link href="/export/">Agricultural Export</Link>
+            <Link href="/news/">News & Stories</Link>
+            <Link href="/image-credits/">Image Credits</Link>
           </div>
         </div>
 
