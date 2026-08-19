@@ -68,8 +68,8 @@ export default function AboutPage() {
       <section className="about-history" id="history">
         <div className="about-history__image">
           <Image
-            src={assetPath(webImages.heritageMercedes)}
-            alt="1950 Mercedes-Benz 170 S illustrating the automotive era when ORBIS began"
+            src={assetPath("/assets/orbis-history-restored.jpg")}
+            alt="Restored archival photograph from the ORBIS automotive history"
             fill
             sizes="(max-width: 900px) 100vw, 48vw"
           />
