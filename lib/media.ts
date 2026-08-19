@@ -2,11 +2,14 @@ const commons = (file: string) =>
   `https://commons.wikimedia.org/wiki/Special:FilePath/${file}`;
 
 export const webImages = {
-  homeHero: commons("Great_Architectural_Building_from_Ethiopia_Addis_Ababa.jpg"),
-  companyBuilding: commons("Great_Architectural_Building_from_Ethiopia_Addis_Ababa.jpg"),
-  companyShowroom: commons("Showroom_of_the_dealership.jpg"),
-  heritageMercedes: commons("1950_Mercedes_Benz_170_S_Saloon_(24683666745).jpg"),
+  // ORBIS-owned/local project assets should lead the corporate story wherever available.
+  homeHero: "/assets/orbis-building.jpg",
+  companyBuilding: "/assets/orbis-building.jpg",
+  companyShowroom: "/assets/orbis-showroom.jpg",
+  heritageMercedes: "/assets/orbis-legacy.jpg",
 
+  // Vehicle imagery remains curated from Wikimedia Commons until ORBIS supplies
+  // an approved current model photography set.
   mercedesSprinter: commons("Benz_VS30_Sprinter.png"),
   mercedesTruck: commons("Mercedes-Benz_Actros.jpg"),
   mercedesPassenger: commons("2023_Mercedes_E_Class.jpg"),
@@ -15,30 +18,32 @@ export const webImages = {
   mitsubishiFuso: commons("2015_Mitsubishi_Fuso_Canter.jpg"),
   mitsubishiFusoHeavy: commons("Mitsubishi-Fuso-Super-Great.jpg"),
 
-  automotiveWorkshop: commons(
-    "Mechanic_works_on_car_engine_performing_routine_maintenance_and_inspections_on_vehicle_parts.jpg",
-  ),
-  serviceWorkshop: commons(
-    "Car_repair_in_an_auto_shop_with_tools_and_equipment_present_on_the_floor_and_a_partially_disassembled_vehicle_on_a_lift.jpg",
-  ),
-  partsWorkshop: commons(
-    "Tools_and_parts_are_collected_in_a_metal_bowl_at_an_automotive_workshop.jpg",
-  ),
+  // Prefer local ORBIS facility imagery for service, parts and assembly stories.
+  automotiveWorkshop: "/assets/bus-workshop.jpg",
+  serviceWorkshop: "/assets/bus-workshop.jpg",
+  partsWorkshop: "/assets/bosch-parts.jpg",
   partsDetail: commons(
     "Car_parts_and_tools_scattered_across_a_workshop_floor_during_a_maintenance_session.jpg",
   ),
 
-  ethiopianBus: commons("Coach_bus_in_Lefkada,_Mercedes_Tourismo_V8.JPG"),
-  busAssembly: commons("Linia_montażowa_pojazdów_ciężarowych.jpg"),
+  ethiopianBus: "/assets/orbis-bus.jpg",
+  busAssembly: "/assets/bus-workshop.jpg",
 
-  ethiopianCoffee: commons("Women_checking_coffee.jpg"),
+  // Ethiopia-specific coffee imagery. The Guji and Yirgacheffe files are
+  // documentary Wikimedia Commons images rather than generic stock photography.
+  ethiopianCoffee: commons("Specialty_coffee_originated_from_ethiopia.jpg"),
+  coffeeGuji: commons("Specialty_coffee_originated_from_ethiopia.jpg"),
+  coffeeYirgacheffe: commons("Traditional_Ethiopian_Coffee_Roasting.jpg"),
+  coffeeCeremony: commons(
+    "Secretary_Tillerson_Attends_a_Traditional_Ethiopian_Coffee_Ceremony_(26834928728).jpg",
+  ),
   greenCoffee: commons("Green_Coffee_Beans_(4075921494).jpg"),
   oilseeds: commons("Sesame_seeds.JPG"),
   pulses: commons("Chickpeas.JPG"),
 
-  ethiopianRoad: commons("Addis_Ababa_Street_(54732897029).jpg"),
+  ethiopianRoad: "/assets/ethiopian-road.jpg",
 
-  // Backward-compatible aliases used by existing components while the demo is refined.
-  orbisShowroom: commons("Showroom_of_the_dealership.jpg"),
-  orbisBuilding: commons("Great_Architectural_Building_from_Ethiopia_Addis_Ababa.jpg"),
+  // Backward-compatible aliases used by existing components.
+  orbisShowroom: "/assets/orbis-showroom.jpg",
+  orbisBuilding: "/assets/orbis-building.jpg",
 };
