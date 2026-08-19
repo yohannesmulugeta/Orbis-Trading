@@ -18,12 +18,13 @@ const routes = [
   "/export/pulses",
   "/news",
   "/contact",
+  "/image-credits",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,
     changeFrequency: route === "" || route === "/news" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.7,
+    priority: route === "" ? 1 : route === "/image-credits" ? 0.2 : 0.7,
   }));
 }
