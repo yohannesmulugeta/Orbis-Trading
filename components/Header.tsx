@@ -79,13 +79,36 @@ export function Header() {
   return (
     <header className={`site-header ${scrolled ? "site-header--scrolled" : ""}`}>
       <div className="site-header__inner">
-        <Link className="site-header__logo" href="/" aria-label="ORBIS home">
+        <Link
+          className="site-header__logo"
+          href="/"
+          aria-label="ORBIS home"
+          style={{
+            width: "clamp(156px, 16vw, 206px)",
+            height: "46px",
+            padding: 0,
+            border: 0,
+            borderRadius: 0,
+            background: "transparent",
+            boxShadow: "none",
+            overflow: "hidden",
+            flexShrink: 0,
+          }}
+        >
           <Image
             src={assetPath("/assets/orbis-logo.png")}
             alt="ORBIS Trading and Technical Centre Share Company"
             width={1024}
             height={256}
             priority
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              objectPosition: "left center",
+              mixBlendMode: "screen",
+              filter: "drop-shadow(0 2px 8px rgba(0,0,0,.2))",
+            }}
           />
         </Link>
 
