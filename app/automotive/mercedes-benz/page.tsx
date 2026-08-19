@@ -11,10 +11,17 @@ export const metadata: Metadata = {
     "Explore the ORBIS and Mercedes-Benz automotive story in Ethiopia across sales, service and spare parts.",
 };
 
+const ownershipJourney = [
+  ["01", "Requirement", "Start with how the vehicle will be used—passenger, commercial, fleet or another business application."],
+  ["02", "Vehicle discussion", "ORBIS confirms the relevant current category, model information and availability directly."],
+  ["03", "Delivery support", "The vehicle enquiry connects to ORBIS sales and technical teams before handover."],
+  ["04", "Aftersales", "Workshop support and spare-parts capability continue through the ownership lifecycle."],
+];
+
 export default function MercedesBenzPage() {
   return (
     <>
-      <section className="mb-hero">
+      <section className="mb-hero mb-hero--premium">
         <Image
           className="mb-hero__image"
           src={assetPath(webImages.mercedesSprinter)}
@@ -31,16 +38,23 @@ export default function MercedesBenzPage() {
             <span>Mercedes-Benz</span>
           </nav>
           <p className="mb-hero__eyebrow">Mercedes-Benz · ORBIS Automotive</p>
-          <h1>An automotive legacy built over generations.</h1>
+          <h1>A flagship automotive story built over generations.</h1>
           <p>
-            A flagship ORBIS automotive story supported by vehicle sales, technical service
-            and spare-parts capability in Ethiopia.
+            Mercedes-Benz sits at the centre of the ORBIS automotive story—supported by sales,
+            technical service and spare-parts capability in Ethiopia.
           </p>
           <div className="mb-hero__actions">
             <Link className="button button--gold" href="/contact/">
               Request vehicle information <span aria-hidden="true">↗</span>
             </Link>
             <Link className="mb-text-link" href="/services-parts/">Explore aftersales support ↗</Link>
+          </div>
+        </div>
+        <div className="mb-assurance-bar">
+          <div className="container mb-assurance-bar__grid">
+            <div><span>01</span><strong>Sales</strong><small>Vehicle enquiries & category guidance</small></div>
+            <div><span>02</span><strong>Service</strong><small>Workshop & technical support</small></div>
+            <div><span>03</span><strong>Spare Parts</strong><small>Parts support within ORBIS</small></div>
           </div>
         </div>
       </section>
@@ -68,6 +82,60 @@ export default function MercedesBenzPage() {
               sizes="(max-width: 900px) 100vw, 52vw"
             />
             <span>Passenger · Commercial · Sprinter</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-range">
+        <div className="container">
+          <div className="mb-range__heading">
+            <p className="eyebrow eyebrow--light">Explore by application</p>
+            <h2>Start with what the vehicle needs to do.</h2>
+            <p>ORBIS confirms current models and availability after understanding the intended use.</p>
+          </div>
+          <div className="mb-range__grid">
+            <article className="mb-range-card mb-range-card--passenger">
+              <Image src={assetPath(webImages.mercedesPassenger)} alt="Mercedes-Benz passenger vehicle" fill sizes="(max-width: 900px) 100vw, 50vw" />
+              <div className="mb-range-card__overlay" />
+              <div className="mb-range-card__copy">
+                <span>01 · Passenger</span>
+                <h3>Passenger mobility.</h3>
+                <p>Discuss current passenger-vehicle categories with the ORBIS automotive team.</p>
+                <Link href="/contact/">Enquire about passenger vehicles ↗</Link>
+              </div>
+            </article>
+            <article className="mb-range-card">
+              <Image src={assetPath(webImages.mercedesTruck)} alt="Mercedes-Benz commercial truck" fill sizes="(max-width: 900px) 100vw, 50vw" />
+              <div className="mb-range-card__overlay" />
+              <div className="mb-range-card__copy">
+                <span>02 · Commercial</span>
+                <h3>Business & transport applications.</h3>
+                <p>Start with payload, route and intended application before the current vehicle is confirmed.</p>
+                <Link href="/contact/">Discuss a commercial requirement ↗</Link>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section mb-ownership">
+        <div className="container mb-ownership__grid">
+          <div className="mb-ownership__intro">
+            <p className="eyebrow">One connected journey</p>
+            <h2>From requirement to long-term support.</h2>
+            <p>
+              The premium experience should make clear that ORBIS is not only presenting a vehicle.
+              It is presenting the support operation around that vehicle.
+            </p>
+          </div>
+          <div className="mb-ownership__steps">
+            {ownershipJourney.map(([number, title, text]) => (
+              <article key={number}>
+                <span>{number}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -110,39 +178,32 @@ export default function MercedesBenzPage() {
         </div>
       </section>
 
-      <section className="section mb-applications">
-        <div className="container mb-applications__grid">
-          <div className="mb-applications__media">
-            <Image
-              src={assetPath(webImages.mercedesPassenger)}
-              alt="Modern Mercedes-Benz E-Class passenger vehicle"
-              fill
-              sizes="(max-width: 900px) 100vw, 48vw"
-            />
+      <section className="mb-fleet">
+        <div className="mb-fleet__media">
+          <Image src={assetPath(webImages.mercedesSprinter)} alt="Mercedes-Benz Sprinter for business mobility" fill sizes="(max-width: 900px) 100vw, 55vw" />
+        </div>
+        <div className="mb-fleet__copy">
+          <p className="eyebrow">Fleet & corporate enquiries</p>
+          <h2>Make the conversation about the operation, not only the model.</h2>
+          <p>
+            Companies and institutions can describe the intended vehicle application, quantity
+            and operating requirement so ORBIS can route the enquiry to the appropriate automotive team.
+          </p>
+          <div className="mb-fleet__tags">
+            <span>Passenger mobility</span>
+            <span>Goods movement</span>
+            <span>Fleet requirements</span>
           </div>
-          <div className="mb-applications__copy">
-            <p className="eyebrow">Passenger & commercial mobility</p>
-            <h2>Begin with the application, then confirm the vehicle.</h2>
-            <p>
-              ORBIS can review the intended use and confirm the relevant current vehicle
-              category, model information and commercial details directly.
-            </p>
-            <div className="mb-applications__tags" aria-label="Mercedes-Benz categories">
-              <span>Passenger Vehicles</span>
-              <span>Commercial Vehicles</span>
-              <span>Sprinter</span>
-            </div>
-            <Link className="button button--dark" href="/contact/">
-              Discuss your requirement <span aria-hidden="true">↗</span>
-            </Link>
-          </div>
+          <Link className="button button--dark" href="/contact/">
+            Start a fleet enquiry <span aria-hidden="true">↗</span>
+          </Link>
         </div>
       </section>
 
       <section className="mb-local">
         <Image
           src={assetPath(webImages.serviceWorkshop)}
-          alt="Automotive service workshop with a vehicle on a lift"
+          alt="ORBIS automotive service workshop"
           fill
           sizes="100vw"
         />
