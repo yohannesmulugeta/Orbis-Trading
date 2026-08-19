@@ -1,0 +1,243 @@
+/* Premium editorial page systems for flagship automotive and Ethiopian coffee. */
+
+/* Mercedes-Benz flagship page */
+.mb-hero--premium {
+  min-height: min(940px, 94vh);
+  padding-bottom: 118px;
+}
+
+.mb-hero--premium .mb-hero__image {
+  object-fit: cover;
+  object-position: center 56%;
+  filter: saturate(0.82) contrast(1.06);
+}
+
+.mb-hero--premium .mb-hero__overlay {
+  background:
+    linear-gradient(90deg, rgba(3, 10, 17, 0.92) 0%, rgba(3, 10, 17, 0.62) 48%, rgba(3, 10, 17, 0.2) 100%),
+    linear-gradient(0deg, rgba(3, 10, 17, 0.72) 0%, transparent 44%);
+}
+
+.mb-assurance-bar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  border-top: 1px solid rgba(255,255,255,.16);
+  background: rgba(5, 14, 23, .82);
+  backdrop-filter: blur(14px);
+}
+
+.mb-assurance-bar__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mb-assurance-bar__grid > div {
+  display: grid;
+  min-height: 104px;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-content: center;
+  column-gap: 14px;
+  padding: 22px 28px;
+  border-right: 1px solid rgba(255,255,255,.12);
+  color: #fff;
+}
+
+.mb-assurance-bar__grid > div:last-child { border-right: 0; }
+.mb-assurance-bar__grid span { grid-row: 1 / span 2; color: #d7ad83; font-size: .68rem; font-weight: 800; letter-spacing: .12em; }
+.mb-assurance-bar__grid strong { font-size: 1rem; line-height: 1.25; }
+.mb-assurance-bar__grid small { color: rgba(255,255,255,.56); font-size: .73rem; }
+
+.mb-range {
+  padding: clamp(86px, 8vw, 132px) 0;
+  background: #07121f;
+  color: #fff;
+}
+
+.mb-range__heading {
+  display: grid;
+  max-width: 820px;
+  margin-bottom: clamp(44px, 6vw, 76px);
+}
+
+.mb-range__heading h2 { max-width: 13ch; margin-bottom: 20px; font-size: clamp(2.7rem, 4.8vw, 5.3rem); line-height: .98; }
+.mb-range__heading > p:last-child { max-width: 58ch; color: rgba(255,255,255,.64); }
+
+.mb-range__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.mb-range-card {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+  background: #111d29;
+}
+
+.mb-range-card img {
+  object-fit: cover;
+  transition: transform 800ms cubic-bezier(.22,1,.36,1);
+}
+
+.mb-range-card:hover img { transform: scale(1.035); }
+
+.mb-range-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(3,10,17,.08) 20%, rgba(3,10,17,.9) 100%);
+}
+
+.mb-range-card__copy {
+  position: absolute;
+  right: clamp(24px, 4vw, 48px);
+  bottom: clamp(26px, 4vw, 46px);
+  left: clamp(24px, 4vw, 48px);
+  z-index: 2;
+}
+
+.mb-range-card__copy > span { display: block; margin-bottom: 14px; color: #d7ad83; font-size: .67rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.mb-range-card__copy h3 { max-width: 12ch; margin-bottom: 14px; font-size: clamp(2rem, 3.4vw, 3.8rem); line-height: 1; }
+.mb-range-card__copy p { max-width: 48ch; margin-bottom: 24px; color: rgba(255,255,255,.68); }
+.mb-range-card__copy a { display: inline-block; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.22); color: #fff; font-size: .68rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+
+.mb-ownership { background: #f3f1eb; }
+.mb-ownership__grid { display: grid; grid-template-columns: minmax(280px,.75fr) minmax(0,1.25fr); gap: clamp(48px,8vw,120px); }
+.mb-ownership__intro { position: sticky; top: calc(var(--header-height) + 42px); align-self: start; }
+.mb-ownership__intro h2 { margin-bottom: 22px; font-size: clamp(2.45rem, 4vw, 4.5rem); line-height: 1; }
+.mb-ownership__intro > p:last-child { max-width: 40ch; color: var(--text-muted-premium); }
+.mb-ownership__steps { border-top: 1px solid rgba(9,22,35,.16); }
+.mb-ownership__steps article { display: grid; grid-template-columns: 58px minmax(170px,.55fr) minmax(0,1fr); gap: 22px; padding: 32px 0; border-bottom: 1px solid rgba(9,22,35,.16); }
+.mb-ownership__steps span { color: var(--accent-strong); font-size: .7rem; font-weight: 800; letter-spacing: .1em; }
+.mb-ownership__steps h3 { font-size: clamp(1.25rem,2vw,1.75rem); }
+.mb-ownership__steps p { color: var(--text-muted-premium); }
+
+.mb-fleet {
+  display: grid;
+  grid-template-columns: minmax(0,1.1fr) minmax(360px,.9fr);
+  min-height: 720px;
+  background: #f7f6f2;
+}
+
+.mb-fleet__media { position: relative; min-height: 620px; overflow: hidden; }
+.mb-fleet__media img { object-fit: cover; }
+.mb-fleet__copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(56px,7vw,112px); }
+.mb-fleet__copy h2 { max-width: 11ch; margin-bottom: 24px; font-size: clamp(2.7rem,4.6vw,5rem); line-height: .98; }
+.mb-fleet__copy > p:not(.eyebrow) { max-width: 48ch; margin-bottom: 30px; color: var(--text-muted-premium); }
+.mb-fleet__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 34px; }
+.mb-fleet__tags span { padding: 9px 12px; border: 1px solid rgba(9,22,35,.16); font-size: .72rem; font-weight: 700; }
+
+/* Ethiopian Coffee flagship page */
+.coffee-hero {
+  position: relative;
+  min-height: min(900px, 92vh);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: #fff;
+  background: #172218;
+}
+
+.coffee-hero__image { object-fit: cover; filter: saturate(.9) contrast(1.03); }
+.coffee-hero__overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(13,24,15,.92) 0%, rgba(13,24,15,.64) 48%, rgba(13,24,15,.22) 100%), linear-gradient(0deg, rgba(13,24,15,.76) 0%, transparent 50%); }
+.coffee-hero__content { position: relative; z-index: 2; padding-top: calc(var(--header-height) + 100px); padding-bottom: clamp(62px,8vw,110px); }
+.coffee-hero h1 { max-width: 980px; margin-bottom: 24px; font-size: clamp(3.5rem,6vw,6.6rem); line-height: .94; letter-spacing: -.05em; }
+.coffee-hero__content > p:not(.eyebrow) { max-width: 62ch; color: rgba(255,255,255,.76); font-size: clamp(1rem,1.3vw,1.2rem); }
+.coffee-hero__facts { display: grid; width: min(760px,100%); grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1px; margin-top: 44px; background: rgba(255,255,255,.18); }
+.coffee-hero__facts > div { min-height: 100px; padding: 20px 22px; background: rgba(12,25,15,.72); backdrop-filter: blur(12px); }
+.coffee-hero__facts strong { display: block; color: #d5b887; font-size: 1.75rem; line-height: 1; }
+.coffee-hero__facts span { display: block; margin-top: 8px; color: rgba(255,255,255,.62); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
+
+.coffee-story { padding: clamp(90px,9vw,150px) 0; background: #f0eee7; }
+.coffee-story__grid { display: grid; grid-template-columns: minmax(260px,.68fr) minmax(0,1.42fr); gap: clamp(50px,8vw,120px); align-items: start; }
+.coffee-story__intro { position: sticky; top: calc(var(--header-height) + 44px); }
+.coffee-story__intro h2 { max-width: 10ch; margin-bottom: 24px; font-size: clamp(2.5rem,4vw,4.6rem); line-height: .98; }
+.coffee-story__intro > p:not(.eyebrow) { max-width: 38ch; color: var(--text-muted-premium); }
+.coffee-story__chapters { display: grid; gap: 24px; }
+.coffee-story-card { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(250px,.9fr); min-height: 460px; background: #fff; }
+.coffee-story-card:nth-child(even) { grid-template-columns: minmax(250px,.9fr) minmax(0,1.1fr); }
+.coffee-story-card:nth-child(even) .coffee-story-card__media { order: 2; }
+.coffee-story-card__media { position: relative; min-height: 420px; overflow: hidden; }
+.coffee-story-card__media img { object-fit: cover; transition: transform 800ms cubic-bezier(.22,1,.36,1); }
+.coffee-story-card:hover img { transform: scale(1.035); }
+.coffee-story-card__overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 56%, rgba(10,21,13,.2)); }
+.coffee-story-card__copy { display: flex; flex-direction: column; justify-content: center; padding: clamp(34px,4vw,58px); }
+.coffee-story-card__copy > span { margin-bottom: 30px; color: #9a6c36; font-size: .68rem; font-weight: 800; letter-spacing: .12em; }
+.coffee-story-card__copy > p { margin-bottom: 12px; color: #7c603e; font-size: .67rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.coffee-story-card__copy h3 { margin-bottom: 16px; font-size: clamp(1.9rem,3vw,3.25rem); line-height: 1; }
+.coffee-story-card__copy > div { color: var(--text-muted-premium); }
+
+.coffee-origin-explorer { background: #fff; }
+.coffee-origin-explorer__grid { display: grid; grid-template-columns: minmax(280px,.75fr) minmax(0,1.25fr); gap: clamp(48px,8vw,120px); align-items: end; }
+.coffee-origin-explorer .section-heading { margin-bottom: 0; }
+.coffee-origin-cloud--premium { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); border-top: 1px solid rgba(9,22,35,.16); }
+.coffee-origin-cloud--premium span { display: flex; min-height: 78px; align-items: center; gap: 18px; padding: 18px 0; border-bottom: 1px solid rgba(9,22,35,.16); color: #0b1723; font-size: clamp(1.2rem,2vw,1.7rem); }
+.coffee-origin-cloud--premium span:nth-child(odd) { padding-right: 22px; border-right: 1px solid rgba(9,22,35,.16); }
+.coffee-origin-cloud--premium span:nth-child(even) { padding-left: 22px; }
+.coffee-origin-cloud--premium small { color: #9a6c36; font-size: .64rem; font-weight: 800; letter-spacing: .1em; }
+
+.coffee-groups--premium { background: #f7f6f2; }
+
+.coffee-verification { padding: clamp(78px,8vw,120px) 0; background: #112218; color: #fff; }
+.coffee-verification__grid { display: grid; grid-template-columns: minmax(280px,.8fr) minmax(0,1.2fr); gap: clamp(48px,8vw,120px); align-items: start; }
+.coffee-verification h2 { max-width: 11ch; margin-bottom: 20px; font-size: clamp(2.5rem,4vw,4.5rem); line-height: .98; }
+.coffee-verification__grid > div:first-child > p:not(.eyebrow) { max-width: 45ch; color: rgba(255,255,255,.66); }
+.verification-list--premium { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); border-top: 1px solid rgba(255,255,255,.16); }
+.verification-list--premium span { display: flex; min-height: 74px; align-items: center; gap: 18px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.16); color: #fff; }
+.verification-list--premium span:nth-child(odd) { padding-right: 20px; border-right: 1px solid rgba(255,255,255,.16); }
+.verification-list--premium span:nth-child(even) { padding-left: 20px; }
+.verification-list--premium small { color: #d5b887; font-size: .64rem; font-weight: 800; letter-spacing: .1em; }
+
+@media (max-width: 1024px) {
+  .mb-range-card { min-height: 560px; }
+  .mb-ownership__grid,
+  .coffee-story__grid,
+  .coffee-origin-explorer__grid,
+  .coffee-verification__grid { grid-template-columns: 1fr; }
+  .mb-ownership__intro,
+  .coffee-story__intro { position: static; max-width: 720px; }
+  .mb-fleet { grid-template-columns: 1fr; }
+  .mb-fleet__media { min-height: 520px; }
+}
+
+@media (max-width: 720px) {
+  .mb-hero--premium { min-height: 760px; padding-bottom: 0; }
+  .mb-assurance-bar { position: relative; }
+  .mb-assurance-bar__grid { grid-template-columns: 1fr; }
+  .mb-assurance-bar__grid > div { min-height: 86px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .mb-range__grid { grid-template-columns: 1fr; }
+  .mb-range-card { min-height: 500px; }
+  .mb-ownership__steps article { grid-template-columns: 42px 1fr; gap: 12px 18px; }
+  .mb-ownership__steps p { grid-column: 2; }
+  .mb-fleet__media { min-height: 420px; }
+  .mb-fleet__copy { padding: 56px 20px; }
+
+  .coffee-hero { min-height: 760px; }
+  .coffee-hero h1 { font-size: clamp(3rem,14vw,4.6rem); }
+  .coffee-hero__facts { grid-template-columns: 1fr; }
+  .coffee-hero__facts > div { min-height: 74px; }
+  .coffee-story-card,
+  .coffee-story-card:nth-child(even) { grid-template-columns: 1fr; }
+  .coffee-story-card:nth-child(even) .coffee-story-card__media { order: 0; }
+  .coffee-story-card__media { min-height: 360px; }
+  .coffee-origin-cloud--premium,
+  .verification-list--premium { grid-template-columns: 1fr; }
+  .coffee-origin-cloud--premium span:nth-child(odd),
+  .verification-list--premium span:nth-child(odd) { padding-right: 0; border-right: 0; }
+  .coffee-origin-cloud--premium span:nth-child(even),
+  .verification-list--premium span:nth-child(even) { padding-left: 0; }
+}
+
+@media (hover: none) {
+  .mb-range-card:hover img,
+  .coffee-story-card:hover img { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mb-range-card img,
+  .coffee-story-card__media img { transition: none; }
+}
