@@ -5,9 +5,9 @@ import { ArrowLink } from "@/components/ArrowLink";
 import { CountUpValue } from "@/components/CountUpValue";
 import { InquiryCta } from "@/components/InquiryCta";
 import { SectionHeading } from "@/components/SectionHeading";
-import { services, statistics, timeline } from "@/lib/content";
+import { services, statistics } from "@/lib/content";
 import { webImages } from "@/lib/media";
-import { assetPath, basePath } from "@/lib/paths";
+import { assetPath } from "@/lib/paths";
 
 export const metadata: Metadata = {
   title: "Serving Ethiopia Since 1950",
@@ -15,13 +15,83 @@ export const metadata: Metadata = {
     "Discover ORBIS's automotive heritage, Mercedes-Benz story, aftersales capability, bus assembly and Ethiopian agricultural export business.",
 };
 
+const legacyChapters = [
+  {
+    number: "01",
+    label: "1950",
+    title: "A journey begins in Addis Ababa.",
+    text: "ORBIS began at Menelik Square at a time when Ethiopia's modern automotive market was still taking shape.",
+    image: webImages.heritageMercedes,
+    alt: "Historical ORBIS automotive image",
+  },
+  {
+    number: "02",
+    label: "Automotive",
+    title: "Mobility became a long-term commitment.",
+    text: "Vehicle sales grew into a connected automotive operation supported by technical knowledge, service and spare parts.",
+    image: webImages.mercedesSprinter,
+    alt: "Mercedes-Benz Sprinter commercial vehicle",
+  },
+  {
+    number: "03",
+    label: "Ownership",
+    title: "Support continues after the sale.",
+    text: "Workshop capability and an organized parts operation help ORBIS support represented vehicle brands through the ownership lifecycle.",
+    image: webImages.serviceWorkshop,
+    alt: "ORBIS technical workshop",
+  },
+  {
+    number: "04",
+    label: "Local capability",
+    title: "Engineering for Ethiopian roads.",
+    text: "Bus-body assembly combines international vehicle platforms with local engineering, construction, testing and aftersales support.",
+    image: webImages.ethiopianBus,
+    alt: "ORBIS passenger bus",
+  },
+  {
+    number: "05",
+    label: "International trade",
+    title: "From Ethiopia to international markets.",
+    text: "The ORBIS portfolio extends beyond mobility into Ethiopian coffee, oilseeds and pulses for international enquiries.",
+    image: webImages.ethiopianCoffee,
+    alt: "Ethiopian coffee production",
+  },
+];
+
+const facilities = [
+  {
+    eyebrow: "Headquarters & showroom",
+    title: "A physical presence behind the brand.",
+    text: "ORBIS operates from Addis Ababa with customer-facing, technical and operational facilities documented in the company profile.",
+    image: webImages.companyShowroom,
+    href: "/about/#facilities",
+    alt: "ORBIS showroom in Addis Ababa",
+  },
+  {
+    eyebrow: "Technical capability",
+    title: "Workshop support built around ownership.",
+    text: "Service, inspection, maintenance and parts support are presented as one connected customer journey.",
+    image: webImages.serviceWorkshop,
+    href: "/services-parts/",
+    alt: "ORBIS technical workshop",
+  },
+  {
+    eyebrow: "Local engineering",
+    title: "Bus-body assembly in Ethiopia.",
+    text: "A dedicated capability connecting chassis, engineering, body construction, testing and aftersales support.",
+    image: webImages.busAssembly,
+    href: "/bus-assembly/",
+    alt: "ORBIS bus assembly facility",
+  },
+];
+
 export default function HomePage() {
   return (
     <>
       <section className="home-hero">
         <Image
           className="home-hero__background"
-          src={`${basePath}/assets/orbis-building.jpg`}
+          src={assetPath(webImages.homeHero)}
           alt="ORBIS headquarters in Addis Ababa"
           fill
           priority
@@ -36,12 +106,12 @@ export default function HomePage() {
               <span>Addis Ababa, Ethiopia</span>
             </div>
             <h1>
-              <span>Serving Ethiopia Since 1950</span>
-              Automotive, Service & Trade
+              <span>75+ years of experience</span>
+              Moving Ethiopia forward.
             </h1>
             <p>
-              ORBIS brings together vehicle sales, technical service, spare parts, local bus-body
-              assembly and agricultural export activity from Addis Ababa.
+              ORBIS connects automotive sales, technical service, spare parts, local bus-body
+              assembly and Ethiopian agricultural exports through one long-established company.
             </p>
             <div className="home-hero__actions">
               <Link className="button button--gold" href="/automotive/">
@@ -63,41 +133,41 @@ export default function HomePage() {
         <div className="home-hero__rail">
           <span>75+ years</span>
           <span>Automotive</span>
+          <span>Engineering</span>
           <span>International Trade</span>
         </div>
       </section>
 
-      <section className="section heritage-intro" id="heritage">
-        <div className="container heritage-intro__grid">
-          <div className="heritage-intro__number" aria-hidden="true">75<span>+</span></div>
-          <div className="heritage-intro__copy">
-            <p className="eyebrow">A legacy built over generations</p>
-            <h2>From Menelik Square to a diversified Ethiopian company.</h2>
+      <section className="legacy-scroll" aria-labelledby="legacy-scroll-title">
+        <div className="container legacy-scroll__grid">
+          <aside className="legacy-scroll__intro">
+            <p className="eyebrow">75 years moving forward</p>
+            <h2 id="legacy-scroll-title">One company. Five chapters of capability.</h2>
             <p>
-              ORBIS began at Menelik Square when Ethiopia's automotive market was still in its
-              early years. The business grew across vehicle sales, technical service, spare
-              parts, local engineering and international trade.
+              Scroll through the ORBIS story—from its automotive roots to local engineering
+              and international trade.
             </p>
-            <ArrowLink href="/about/" tone="dark">Read the ORBIS story</ArrowLink>
-          </div>
-        </div>
-      </section>
+            <ArrowLink href="/about/#history" tone="dark">Explore the full history</ArrowLink>
+          </aside>
 
-      <section className="timeline-section">
-        <div className="container">
-          <div className="timeline-section__heading">
-            <span>1950</span>
-            <div className="timeline-section__line" />
-            <span>Today</span>
-          </div>
-          <div className="timeline">
-            {timeline.map((item, index) => (
-              <article className="timeline__item" key={`${item.year}-${item.title}`}>
-                <span className="timeline__dot" aria-hidden="true" />
-                <span className="timeline__index">{String(index + 1).padStart(2, "0")}</span>
-                <p className="timeline__year">{item.year}</p>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
+          <div className="legacy-scroll__chapters">
+            {legacyChapters.map((chapter) => (
+              <article className="legacy-chapter" key={chapter.number}>
+                <div className="legacy-chapter__media">
+                  <Image
+                    src={assetPath(chapter.image)}
+                    alt={chapter.alt}
+                    fill
+                    sizes="(max-width: 900px) 100vw, 58vw"
+                  />
+                  <div className="legacy-chapter__shade" />
+                  <span className="legacy-chapter__number">{chapter.number}</span>
+                  <div className="legacy-chapter__copy">
+                    <p>{chapter.label}</p>
+                    <h3>{chapter.title}</h3>
+                    <div>{chapter.text}</div>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
@@ -213,7 +283,7 @@ export default function HomePage() {
         <div className="bus-feature__media">
           <Image
             src={assetPath(webImages.ethiopianBus)}
-            alt="Mercedes-Benz passenger coach"
+            alt="ORBIS passenger bus"
             fill
             sizes="(max-width: 900px) 100vw, 50vw"
           />
@@ -242,7 +312,7 @@ export default function HomePage() {
         <Image
           className="export-feature__background"
           src={assetPath(webImages.ethiopianCoffee)}
-          alt="Coffee quality inspection in Ethiopia"
+          alt="Ethiopian specialty coffee production"
           fill
           sizes="100vw"
         />
@@ -255,6 +325,30 @@ export default function HomePage() {
             <Link href="/export/coffee/"><span>01</span><strong>Ethiopian Coffee</strong><span aria-hidden="true">↗</span></Link>
             <Link href="/export/oilseeds/"><span>02</span><strong>Oilseeds</strong><span aria-hidden="true">↗</span></Link>
             <Link href="/export/pulses/"><span>03</span><strong>Pulses</strong><span aria-hidden="true">↗</span></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section facilities-showcase">
+        <div className="container">
+          <SectionHeading
+            eyebrow="ORBIS in the real world"
+            title="Facilities and operating capability behind the website."
+            text="A premium corporate story should show the physical operation, not only describe it. These sections use ORBIS project assets wherever they are available."
+          />
+          <div className="facilities-showcase__grid">
+            {facilities.map((facility, index) => (
+              <Link className={index === 0 ? "facility-card facility-card--large" : "facility-card"} href={facility.href} key={facility.title}>
+                <Image src={assetPath(facility.image)} alt={facility.alt} fill sizes={index === 0 ? "(max-width: 900px) 100vw, 58vw" : "(max-width: 900px) 100vw, 30vw"} />
+                <div className="facility-card__overlay" />
+                <div className="facility-card__copy">
+                  <p>{facility.eyebrow}</p>
+                  <h3>{facility.title}</h3>
+                  <div>{facility.text}</div>
+                  <span>Explore capability ↗</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
