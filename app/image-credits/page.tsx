@@ -9,6 +9,42 @@ export const metadata: Metadata = {
 
 const credits = [
   {
+    title: "Mercedes-Benz Sprinter (2018)",
+    author: "Jason Lawrence",
+    license: "CC BY 4.0",
+    href: "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Sprinter_(2018).jpg",
+  },
+  {
+    title: "Renault Duster",
+    author: "Abdulla Al Muhairi",
+    license: "CC0 1.0",
+    href: "https://commons.wikimedia.org/wiki/File:Renault_Duster_(51658579574).jpg",
+  },
+  {
+    title: "Mitsubishi Fuso Super Great",
+    author: "Sulthan Naufal",
+    license: "CC BY-SA 4.0",
+    href: "https://commons.wikimedia.org/wiki/File:Mitsubishi_Fuso_Super_Great_(B_9925_UEV).jpg",
+  },
+  {
+    title: "Mercedes-Benz Tourismo",
+    author: "SzSzili01",
+    license: "CC BY 4.0",
+    href: "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Tourismo_(MAE-520).jpg",
+  },
+  {
+    title: "Automotive mechanic performing maintenance",
+    author: "Nenad Stojković / Shixart1985",
+    license: "CC BY 2.0",
+    href: "https://commons.wikimedia.org/wiki/File:Mechanic_works_on_car_engine_performing_routine_maintenance_and_inspections_on_vehicle_parts.jpg",
+  },
+  {
+    title: "Truck assembly line",
+    author: "Intercooler422",
+    license: "CC0 1.0",
+    href: "https://commons.wikimedia.org/wiki/File:Linia_monta%C5%BCowa_pojazd%C3%B3w_ci%C4%99%C5%BCarowych.jpg",
+  },
+  {
     title: "Specialty coffee originated from Ethiopia",
     author: "Ethiopian coffee house",
     license: "CC BY-SA 4.0",
@@ -27,9 +63,9 @@ const credits = [
     href: "https://commons.wikimedia.org/wiki/File:Secretary_Tillerson_Attends_a_Traditional_Ethiopian_Coffee_Ceremony_(26834928728).jpg",
   },
   {
-    title: "Mercedes-Benz, Renault and Mitsubishi Fuso demonstration imagery",
+    title: "Additional vehicle and commodity demonstration imagery",
     author: "Various Wikimedia Commons contributors",
-    license: "See the linked Wikimedia Commons source for each file's author and licence",
+    license: "See each Wikimedia Commons source page for author and licence details",
     href: "https://commons.wikimedia.org/",
   },
 ];
