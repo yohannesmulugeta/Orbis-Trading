@@ -7,6 +7,7 @@ import "./image-overhaul.css";
 import "./statistics-countup-fix.css";
 import "./premium-pages.css";
 import "./brand-polish.css";
+import "./responsive-qa.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MotionEnhancer } from "@/components/MotionEnhancer";
