@@ -20,7 +20,7 @@ export default function AboutPage() {
         eyebrow="About ORBIS"
         title="Over 75 years. One forward-looking journey."
         text="From Menelik Square in 1950 to a diversified automotive, engineering and export business."
-        image="/assets/orbis-history-restored.jpg"
+        image="/assets/orbis-history-restored.webp"
         imageAlt="Restored archival photograph from the ORBIS automotive history"
       />
 
