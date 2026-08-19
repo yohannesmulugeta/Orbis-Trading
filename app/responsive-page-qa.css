@@ -1,0 +1,202 @@
+/* Secondary-page responsive QA.
+   Complements responsive-qa.css with explicit protections for standard corporate pages. */
+
+@media (max-width: 1024px) {
+  .service-intro__grid,
+  .dealership-model__grid,
+  .automotive-application__grid,
+  .bosch-section__grid,
+  .export-intro__grid,
+  .export-portfolio__grid,
+  .split-feature {
+    grid-template-columns: 1fr !important;
+  }
+
+  .service-intro__grid,
+  .dealership-model__grid,
+  .automotive-application__grid,
+  .bosch-section__grid,
+  .export-intro__grid,
+  .export-portfolio__grid {
+    gap: 48px !important;
+  }
+
+  .automotive-application__image,
+  .bosch-section__image,
+  .split-feature__media {
+    min-height: 460px;
+  }
+
+  .automotive-ecosystem__grid,
+  .parts-planning__grid,
+  .export-process__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .global-reach {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 820px) {
+  .parts-feature,
+  .export-categories__grid,
+  .news-page__grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .parts-feature__image {
+    min-height: 430px;
+  }
+
+  .parts-feature__copy {
+    padding: 60px max(22px, calc((100vw - var(--container)) / 2));
+  }
+
+  .export-category,
+  .export-category--coffee {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    min-height: 500px;
+  }
+
+  .news-page__grid a {
+    min-height: 330px;
+    padding: 34px;
+  }
+
+  .news-page__grid a > span {
+    margin-bottom: 34px;
+  }
+
+  .news-page__grid a > div {
+    min-height: 0;
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 720px) {
+  .automotive-ecosystem__grid,
+  .parts-planning__grid,
+  .export-process__grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .automotive-brands-page__list > a {
+    min-height: 138px !important;
+    grid-template-columns: 34px minmax(0, 1fr) 24px !important;
+    gap: 14px !important;
+    padding: 22px 0 !important;
+  }
+
+  .automotive-brands-page__list h3 {
+    font-size: clamp(1.7rem, 8vw, 2.45rem);
+  }
+
+  .automotive-brands-page__list p {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .automotive-application__image,
+  .bosch-section__image,
+  .split-feature__media,
+  .parts-feature__image {
+    min-height: 340px !important;
+  }
+
+  .automotive-application__grid > div:first-child,
+  .bosch-section__grid > div:first-child {
+    min-width: 0;
+  }
+
+  .automotive-application .button,
+  .bosch-section .button,
+  .parts-feature .button {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .parts-feature__copy {
+    padding: 54px 18px !important;
+  }
+
+  .parts-feature__stat {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .parts-feature__stat strong {
+    font-size: clamp(3rem, 14vw, 4.6rem);
+  }
+
+  .global-reach {
+    min-height: 340px;
+    padding: 28px 20px;
+  }
+
+  .global-reach__origin strong {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .global-reach__markets {
+    gap: 10px;
+  }
+
+  .global-reach__markets span {
+    font-size: 0.7rem;
+  }
+
+  .export-category,
+  .export-category--coffee {
+    min-height: 440px;
+  }
+
+  .export-category__copy {
+    right: 22px;
+    bottom: 24px;
+    left: 22px;
+  }
+
+  .export-category__copy h2 {
+    font-size: clamp(2.2rem, 10vw, 3.4rem);
+  }
+
+  .news-page__grid {
+    border-left: 0;
+  }
+
+  .news-page__grid a {
+    min-height: 0;
+    padding: 30px 0;
+    border-right: 0;
+  }
+
+  .news-page__grid a > span {
+    margin-bottom: 26px;
+  }
+
+  .news-page__grid h2 {
+    font-size: clamp(1.9rem, 9vw, 2.7rem);
+  }
+
+  .editorial-accordion__panel p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .global-reach {
+    min-height: 300px;
+  }
+
+  .export-category,
+  .export-category--coffee {
+    min-height: 410px;
+  }
+
+  .parts-feature__stat strong {
+    font-size: 3rem;
+  }
+}
