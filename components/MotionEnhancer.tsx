@@ -13,6 +13,12 @@ const selectors = [
   ".mb-local__content",
   ".legacy-chapter",
   ".facility-card",
+  ".mb-range-card",
+  ".mb-ownership__steps article",
+  ".mb-fleet__media",
+  ".coffee-story-card",
+  ".coffee-origin-cloud--premium span",
+  ".verification-list--premium span",
 ].join(",");
 
 export function MotionEnhancer() {
