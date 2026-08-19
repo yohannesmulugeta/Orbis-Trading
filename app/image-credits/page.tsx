@@ -1,0 +1,71 @@
+import type { Metadata } from "next";
+import { PageHero } from "@/components/PageHero";
+import { webImages } from "@/lib/media";
+
+export const metadata: Metadata = {
+  title: "Image Credits",
+  description: "Image source and licensing credits for selected third-party photography used on the ORBIS website prototype.",
+};
+
+const credits = [
+  {
+    title: "Specialty coffee originated from Ethiopia",
+    author: "Ethiopian coffee house",
+    license: "CC BY-SA 4.0",
+    href: "https://commons.wikimedia.org/wiki/File:Specialty_coffee_originated_from_ethiopia.jpg",
+  },
+  {
+    title: "Traditional Ethiopian Coffee Roasting",
+    author: "Charles Haynes",
+    license: "CC BY-SA 2.0",
+    href: "https://commons.wikimedia.org/wiki/File:Traditional_Ethiopian_Coffee_Roasting.jpg",
+  },
+  {
+    title: "Traditional Ethiopian coffee ceremony",
+    author: "U.S. Department of State",
+    license: "Public domain — U.S. Government work",
+    href: "https://commons.wikimedia.org/wiki/File:Secretary_Tillerson_Attends_a_Traditional_Ethiopian_Coffee_Ceremony_(26834928728).jpg",
+  },
+  {
+    title: "Mercedes-Benz, Renault and Mitsubishi Fuso demonstration imagery",
+    author: "Various Wikimedia Commons contributors",
+    license: "See the linked Wikimedia Commons source for each file's author and licence",
+    href: "https://commons.wikimedia.org/",
+  },
+];
+
+export default function ImageCreditsPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Image Credits"
+        title="Photography sources & attribution."
+        text="ORBIS-owned project assets are used wherever available. Selected third-party demonstration images are credited here while approved ORBIS photography is being expanded."
+        image={webImages.companyBuilding}
+        imageAlt="ORBIS headquarters in Addis Ababa"
+      />
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <p className="eyebrow">Third-party imagery</p>
+            <h2>Source transparency matters.</h2>
+            <p className="section-heading__text">
+              These credits apply to selected web-sourced images used in the current corporate prototype.
+              Final launch photography should continue moving toward approved ORBIS-owned visual assets.
+            </p>
+          </div>
+          <div className="services-overview__list">
+            {credits.map((credit, index) => (
+              <a href={credit.href} target="_blank" rel="noreferrer" key={credit.title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{credit.title}</h3>
+                <p>{credit.author} · {credit.license}</p>
+                <span aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
