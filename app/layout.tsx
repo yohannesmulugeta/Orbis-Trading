@@ -8,6 +8,7 @@ import "./statistics-countup-fix.css";
 import "./premium-pages.css";
 import "./brand-polish.css";
 import "./responsive-qa.css";
+import "./responsive-page-qa.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { MotionEnhancer } from "@/components/MotionEnhancer";
