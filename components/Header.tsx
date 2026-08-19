@@ -22,6 +22,10 @@ export function Header() {
   }, []);
 
   useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
 
     if (!open) {
@@ -184,6 +188,7 @@ export function Header() {
               >
                 <Link
                   href={item.href}
+                  tabIndex={open ? 0 : -1}
                   onClick={() => setOpen(false)}
                   aria-current={pathname === item.href ? "page" : undefined}
                 >
@@ -196,6 +201,7 @@ export function Header() {
                       <Link
                         href={child.href}
                         key={child.label}
+                        tabIndex={open ? 0 : -1}
                         onClick={() => setOpen(false)}
                         aria-current={pathname === child.href ? "page" : undefined}
                       >
@@ -207,7 +213,12 @@ export function Header() {
               </div>
             );
           })}
-          <Link className="mobile-menu__cta" href="/contact/" onClick={() => setOpen(false)}>
+          <Link
+            className="mobile-menu__cta"
+            href="/contact/"
+            tabIndex={open ? 0 : -1}
+            onClick={() => setOpen(false)}
+          >
             Start an enquiry <span aria-hidden="true">↗</span>
           </Link>
         </nav>
