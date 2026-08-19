@@ -11,6 +11,8 @@ const selectors = [
   ".mb-story__media",
   ".mb-support__heading",
   ".mb-local__content",
+  ".legacy-chapter",
+  ".facility-card",
 ].join(",");
 
 export function MotionEnhancer() {
@@ -33,7 +35,7 @@ export function MotionEnhancer() {
           observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.16, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0.12, rootMargin: "0px 0px -7% 0px" },
     );
 
     elements.forEach((element) => observer.observe(element));
