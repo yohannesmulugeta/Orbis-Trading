@@ -1,0 +1,112 @@
+/* ORBIS brand presentation polish.
+   The supplied logo artwork includes a dark background, so the website treats it
+   as a clean wordmark rather than placing it inside a second visible card. */
+
+/* Keep the navigation premium and dark in both hero and scrolled states. */
+.site-header--scrolled {
+  color: #fff;
+  background: rgba(4, 12, 20, 0.96);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px) saturate(1.1);
+}
+
+.site-header--scrolled .desktop-nav__item > a {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.site-header--scrolled .desktop-nav__item > a:hover,
+.site-header--scrolled .desktop-nav__item--active > a {
+  color: #ff8a2b;
+}
+
+/* Remove the double-box treatment around the logo. */
+.site-header__logo {
+  position: relative;
+  width: 214px;
+  height: 50px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.site-header__logo::after {
+  position: absolute;
+  right: -22px;
+  top: 50%;
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.14);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.site-header__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.32));
+}
+
+/* The same principle is used in the footer: one brand mark, no nested frame. */
+.site-footer__logo-wrap {
+  width: min(230px, 100%);
+  margin-bottom: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.site-footer__logo-wrap img {
+  width: 100%;
+  height: auto;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 1220px) {
+  .site-header__logo {
+    width: 190px;
+    height: 46px;
+  }
+
+  .site-header__logo::after {
+    right: -16px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-header__logo {
+    width: 176px;
+    height: 42px;
+  }
+
+  .site-header__logo::after {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header__logo {
+    width: 158px;
+    height: 38px;
+  }
+
+  .site-footer__logo-wrap {
+    width: 205px;
+  }
+}
+
+@media (max-width: 390px) {
+  .site-header__logo {
+    width: 148px;
+    height: 36px;
+  }
+}
