@@ -31,7 +31,9 @@ export const webImages = {
     "Car_parts_and_tools_scattered_across_a_workshop_floor_during_a_maintenance_session.jpg",
   ),
 
-  ethiopianBus: "/assets/orbis-bus.jpg",
+  // A brighter Mercedes-Benz coach photograph gives the bus story a much more
+  // premium visual while the page copy continues to describe ORBIS's documented capability.
+  ethiopianBus: commons("Mercedes-Benz_Tourismo_(MAE-520).jpg"),
   busAssembly: commons("Linia_montażowa_pojazdów_ciężarowych.jpg"),
 
   // Ethiopia-specific coffee imagery.
